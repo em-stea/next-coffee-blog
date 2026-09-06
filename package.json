@@ -1,0 +1,35 @@
+{
+  "name": "next-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "dotenv -e .env -- concurrently -n \"NEXT,CHAKRA\" -c \"bgGreen.bold,bgBlue.bold\" \"next dev\" \"pnpm chakra:typegen\"",
+    "chakra:typegen": "npx @chakra-ui/cli typegen ./src/shared/styles/index.ts --watch",
+    "build": "pnpm chakra:typegen:once && next build",
+    "chakra:typegen:once": "npx @chakra-ui/cli typegen ./src/shared/styles/index.ts",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^3.37.0",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "next": "16.3.4",
+    "qs": "^6.16.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^3.37.0",
+    "@types/node": "^20",
+    "@types/qs": "^6.15.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.2.4",
+    "dotenv-cli": "^8.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@11.25.0"
+}
