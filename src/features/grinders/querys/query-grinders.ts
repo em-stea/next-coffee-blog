@@ -1,11 +1,16 @@
 import qs from "qs";
-import { strapiMediaFields } from "@/shared/utils/strapi-media";
 
-const grinderFields = ["name", "slug", "type", "burrType", "description"] as const;
+const grinderFields = [
+  "name",
+  "slug",
+  "type",
+  "burrType",
+  "description",
+] as const;
 
 const grinderPopulate = {
   cover: {
-    fields: [...strapiMediaFields],
+    fields: ["url", "alternativeText", "width", "height", "formats"],
   },
 };
 

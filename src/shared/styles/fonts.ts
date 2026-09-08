@@ -36,7 +36,7 @@ export const InterstateCondensed = localFont({
     },
   ],
   display: "swap",
-  variable: "--fontfamily-tertiary",
+  variable: "--fontfamily-secondary",
 });
 
 export const variablesForHtml = [

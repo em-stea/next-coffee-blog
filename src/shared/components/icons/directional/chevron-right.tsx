@@ -12,5 +12,3 @@ export const ChevronRightIcon = createIcon({
     />
   ),
 });
-
-export default ChevronRightIcon;

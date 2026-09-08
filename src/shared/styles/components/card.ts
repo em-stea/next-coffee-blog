@@ -8,7 +8,7 @@ export const cardSlotRecipe = defineSlotRecipe({
       featured: {
         root: {
           w: { base: "full", lg: "500px" },
-          h: "auto",
+          h: { base: "400px", lg: "550px" },
           overflow: "hidden",
           border: "1px solid",
           borderColor: "neutral.700",

@@ -1,5 +1,4 @@
 import qs from "qs";
-import { strapiMediaFields } from "@/shared/utils/strapi-media";
 
 const accesoryFields = [
   "name",
@@ -10,7 +9,7 @@ const accesoryFields = [
 
 const accesoryPopulate = {
   cover: {
-    fields: [...strapiMediaFields],
+    fields: ["url", "alternativeText", "width", "height", "formats"],
   },
 };
 

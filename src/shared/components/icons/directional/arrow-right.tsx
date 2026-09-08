@@ -20,5 +20,3 @@ export const ArrowRightIcon = createIcon({
     </svg>
   ),
 });
-
-export default ArrowRightIcon;

@@ -21,10 +21,10 @@ export function InfoBox({
       h="full"
       _groupHover={_groupHover}
     >
-      <Text textStyle="eyebrow" textAlign="center">
+      <Text textStyle="eyebrow" textAlign="center" color="neutral.0">
         {label}
       </Text>
-      <Text textStyle="body.1" textAlign="center">
+      <Text textStyle="body.1" textAlign="center" color="neutral.0">
         {value}
       </Text>
     </VStack>

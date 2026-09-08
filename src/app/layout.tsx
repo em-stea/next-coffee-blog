@@ -1,9 +1,9 @@
+import Layout from "@/shared/components/layout";
+import { Provider } from "@/shared/providers/chakra-provider";
+import { EmotionRegistry } from "@/shared/providers/emotion-registry";
+import { variablesForHtml } from "@/shared/styles/fonts";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
-import Layout from "@/shared/components/layout";
-import { EmotionRegistry } from "@/shared/providers/emotion-registry";
-import { Provider } from "@/shared/providers/provider";
-import { variablesForHtml } from "@/shared/styles/fonts";
 
 export const metadata: Metadata = {
   title: "Café Notes",

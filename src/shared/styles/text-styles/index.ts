@@ -6,7 +6,16 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "var(--fontfamily-primary)",
       fontWeight: 600,
-      fontSize: { base: "2.75rem", desktop: "3.75rem" },
+      fontSize: { base: "2.2rem", desktop: "3.75rem" },
+      lineHeight: { base: "2.5rem", desktop: "4.25rem" },
+    },
+  },
+  "title.2": {
+    description: "Title 1",
+    value: {
+      fontFamily: "var(--fontfamily-primary)",
+      fontWeight: 600,
+      fontSize: { base: "2.75rem", desktop: "2.5rem" },
       lineHeight: { base: "3.5rem", desktop: "4.25rem" },
     },
   },
@@ -35,6 +44,17 @@ export const textStyles = defineTextStyles({
       fontWeight: 600,
       fontSize: { base: "0.8125rem", desktop: "0.875rem" },
       lineHeight: { base: "1.125rem", desktop: "1.25rem" },
+      textTransform: "uppercase",
+    },
+  },
+  "body.3.semibold": {
+    description: "Body 2 Semibold",
+    value: {
+      fontFamily: "var(--fontfamily-primary)",
+      fontWeight: 600,
+      fontSize: { base: "0.8125rem", desktop: "1rem" },
+      lineHeight: { base: "1.125rem", desktop: "1.8rem" },
+      letterSpacing: "0.018rem",
       textTransform: "uppercase",
     },
   },

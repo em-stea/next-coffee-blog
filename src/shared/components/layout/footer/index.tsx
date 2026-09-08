@@ -1,1 +1,5 @@
-export { SiteFooter as default } from "@/shared/components/site-footer";
+import { CopyrightFooter } from "./copyright-footer";
+
+export default function Footer() {
+  return <CopyrightFooter />;
+}

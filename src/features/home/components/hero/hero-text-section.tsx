@@ -35,7 +35,7 @@ export const HeroTextSection = ({
   subtitle,
 }: HeroTextSectionProps) => {
   return (
-    <Box pt={{ base: "10", lg: "0" }}>
+    <Box py={{ base: "10", lg: "0" }}>
       <Tag.Root>
         <Circle bg="amber.500" size="2" />
         <Tag.Label>{eyebrow}</Tag.Label>
@@ -46,7 +46,7 @@ export const HeroTextSection = ({
       <Heading
         textStyle="subtitle.1"
         color="neutral.0"
-        maxW={{ base: "70%", lg: "full" }}
+        maxW={{ base: "80%", lg: "full" }}
       >
         {subtitle}
       </Heading>

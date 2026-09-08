@@ -26,5 +26,3 @@ export const SunIcon = createIcon({
     </>
   ),
 });
-
-export default SunIcon;

@@ -1,5 +1,4 @@
 import qs from "qs";
-import { strapiMediaFields } from "@/shared/utils/strapi-media";
 
 const brewMethodFields = [
   "name",
@@ -10,7 +9,7 @@ const brewMethodFields = [
 
 const brewMethodPopulate = {
   cover: {
-    fields: [...strapiMediaFields],
+    fields: ["url", "alternativeText", "width", "height", "formats"],
   },
 };
 

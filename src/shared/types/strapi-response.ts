@@ -23,9 +23,6 @@ export type StrapiMediaFormat = {
   width: number;
   height: number;
   size?: number;
-  ext?: string;
-  mime?: string;
-  name?: string;
 };
 
 export type StrapiMediaFormats = {

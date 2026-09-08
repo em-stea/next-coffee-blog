@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import Footer from "./footer";
 import Header from "./header";
+import Footer from "./footer";
 
 interface LayoutProps {
   children: ReactNode;

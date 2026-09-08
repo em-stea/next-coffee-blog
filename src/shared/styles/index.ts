@@ -18,7 +18,7 @@ const config = defineConfig({
       fonts: {
         heading: { value: "var(--fontfamily-primary)" },
         body: { value: "var(--fontfamily-primary)" },
-        mono: { value: "var(--fontfamily-tertiary)" },
+        footer: { value: "var(--fontfamily-secondary)" },
       },
     },
     textStyles,

@@ -1,5 +1,4 @@
 import qs from "qs";
-import { strapiMediaFields } from "@/shared/utils/strapi-media";
 
 type QueryCoffeeDrinksProps = {
   pageSize?: number;
@@ -24,7 +23,7 @@ export const queryCoffeeDrinks = ({
       ],
       populate: {
         cover: {
-          fields: [...strapiMediaFields],
+          fields: ["url", "alternativeText", "width", "height", "formats"],
         },
         milk_ratio: {
           fields: ["name", "slug", "description"],
@@ -60,7 +59,7 @@ export const queryCoffeeDrinkBySlug = (slug: string) =>
       ],
       populate: {
         cover: {
-          fields: [...strapiMediaFields],
+          fields: ["url", "alternativeText", "width", "height", "formats"],
         },
         milk_ratio: {
           fields: ["name", "slug", "description"],
