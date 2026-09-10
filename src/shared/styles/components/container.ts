@@ -7,7 +7,8 @@ export const containerRecipe = defineRecipe({
   variants: {
     variant: {
       default: {
-        paddingInline: { base: 4, desktop: 16, lg: 16 },
+        paddingInline: { base: 4, desktop: 10, lg: 10 },
+        paddingBlock: { base: 14, desktop: 14, lg: 14 },
       },
     },
   },

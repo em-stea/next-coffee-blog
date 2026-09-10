@@ -4,7 +4,6 @@ export { CupIcon } from "./others/cup";
 export { MoonIcon } from "./others/moon";
 export { SunIcon } from "./others/sun";
 export { WarningIcon } from "./others/warning";
-export { FilledCupIcon } from "./others/filled-cup";
 
 import { ArrowRightIcon } from "./directional/arrow-right";
 import { ChevronRightIcon } from "./directional/chevron-right";
@@ -12,7 +11,6 @@ import { CupIcon } from "./others/cup";
 import { MoonIcon } from "./others/moon";
 import { SunIcon } from "./others/sun";
 import { WarningIcon } from "./others/warning";
-import { FilledCupIcon } from "./others/filled-cup";
 
 export const iconEntries = [
   { name: "CupIcon", component: CupIcon, file: "cup" },
@@ -25,5 +23,4 @@ export const iconEntries = [
   },
   { name: "MoonIcon", component: MoonIcon, file: "moon" },
   { name: "SunIcon", component: SunIcon, file: "sun" },
-  { name: "FilledCupIcon", component: FilledCupIcon, file: "filled-cup" },
 ] as const;

@@ -11,7 +11,7 @@ export default function NotFound() {
       bg="gray.200"
     >
       <WarningIcon color="neutral.900" boxSize={10} />
-      <Heading textStyle="title.2" color="neutral.900">
+      <Heading textStyle="title.3" color="neutral.900">
         No content yet
       </Heading>
       <Text textStyle="body.2" color="neutral.600">

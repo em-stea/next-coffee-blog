@@ -20,18 +20,13 @@ export const Interstate = localFont({
 export const InterstateCondensed = localFont({
   src: [
     {
-      path: "../../../public/fonts/interstate-regular-condense.woff",
-      weight: "500",
-      style: "normal",
-    },
-    {
       path: "../../../public/fonts/interstate-condensed-bold.woff",
-      weight: "700",
+      weight: "600",
       style: "normal",
     },
     {
       path: "../../../public/fonts/interstate-black-condensed.woff",
-      weight: "900",
+      weight: "600",
       style: "normal",
     },
   ],
@@ -39,7 +34,20 @@ export const InterstateCondensed = localFont({
   variable: "--fontfamily-secondary",
 });
 
+export const WalterNeeu = localFont({
+  src: [
+    {
+      path: "../../../public/fonts/walterNeue-normal.woff",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--fontfamily-tertiary",
+});
+
 export const variablesForHtml = [
   Interstate.variable,
   InterstateCondensed.variable,
+  WalterNeeu.variable,
 ].join(" ");

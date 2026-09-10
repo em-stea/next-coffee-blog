@@ -1,18 +1,10 @@
 import { CoffeeDrinkInterface } from "@/features/coffee-drinks/types/coffee-drink";
 import { ArrowRightIcon } from "@/shared/components/icons";
-import { ROUTES } from "@/shared/lib/route";
-import {
-  Box,
-  Button,
-  Card,
-  Heading,
-  HStack,
-  Image,
-  Tag,
-} from "@chakra-ui/react";
-import Link from "next/link";
-import { InfoBox } from "./info-box";
 import { ResponsivePicture } from "@/shared/components/responsive-picture/responsive-picture";
+import { ROUTES } from "@/shared/lib/route";
+import { Box, Button, Card, Heading, HStack, Tag } from "@chakra-ui/react";
+import Link from "next/link";
+import { InfoBox } from "./info-box-card";
 
 export function MainFeaturedCard({ drink }: { drink: CoffeeDrinkInterface }) {
   const { name, espressoShots, cover, servingSize } = drink;

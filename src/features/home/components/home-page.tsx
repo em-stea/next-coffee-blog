@@ -3,9 +3,10 @@ import { getCoffeeDrinks } from "@/features/home/services/get-coffee-drinks";
 
 import { Hero } from "@/features/home/components/hero/hero";
 
-import { queryCoffeeFeaturedDrink } from "../querys/query-coffee-featured-drink";
 import { CoffeeDrinkInterface } from "@/features/coffee-drinks/types/coffee-drink";
 import { notFound } from "next/navigation";
+import { queryCoffeeFeaturedDrink } from "../querys/query-coffee-featured-drink";
+import { CoffeeFundamentals } from "./coffee-fundamentals/coffee-fundamentals";
 
 const FEATURED_DRINK_SLUG = "cold-brew";
 
@@ -39,6 +40,11 @@ export async function HomePage() {
         title="The art, origin and ritual of specialty coffee."
         subtitle="From bean harvesting to your ultimate home brew."
         featuredDrink={featuredDrink as CoffeeDrinkInterface}
+      />
+      <CoffeeFundamentals
+        eyebrow="THE BARISTA LAB // EXPLORE THE CRAFT"
+        title="Deconstruct the cup. Refine your ritual."
+        description="A deep dive into understanding coffee origins, fine-tuning critical brewing parameters, and mastering professional extraction techniques at home."
       />
     </>
   );

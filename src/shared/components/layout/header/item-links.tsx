@@ -1,10 +1,10 @@
 import { Button, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { FC, useState } from "react";
+import { FC } from "react";
 
-import type { ButtonLinkProps, LinkProps, LogoProps } from "./data";
 import useBreakpoint from "@/shared/hooks/use-breakpoint";
-import { CupIcon, FilledCupIcon } from "../../icons";
+import { CupIcon } from "../../icons";
+import type { ButtonLinkProps, LinkProps, LogoProps } from "./data";
 
 interface ItemProps<T> {
   data: T;
@@ -26,20 +26,17 @@ const TextLinkItem: FC<ItemProps<LinkProps>> = ({ data }) => {
 };
 
 const LogoLinkItem: FC<ItemProps<LogoProps>> = ({ data }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <Link
-      href={data.href}
-      aria-label="Home"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {isHovered ? (
-        <FilledCupIcon boxSize="35px" color="coffee.800" cursor="pointer" />
-      ) : (
-        <CupIcon boxSize="35px" color="neutral.900" cursor="pointer" />
-      )}
+    <Link href={data.href} aria-label="Home">
+      <CupIcon
+        boxSize="35px"
+        color="neutral.900"
+        _hover={{
+          // color: "coffee.700",
+          "& .cup-fill": { fill: "coffee.700" },
+        }}
+        cursor="pointer"
+      />
     </Link>
   );
 };

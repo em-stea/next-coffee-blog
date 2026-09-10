@@ -11,7 +11,16 @@ export const textStyles = defineTextStyles({
     },
   },
   "title.2": {
-    description: "Title 1",
+    description: "Title 2",
+    value: {
+      fontFamily: "var(--fontfamily-secondary)",
+      fontWeight: 600,
+      fontSize: { base: "2.75rem", desktop: "3rem" },
+      lineHeight: { base: "3.5rem", desktop: "3.45rem" },
+    },
+  },
+  "title.3": {
+    description: "Title 2",
     value: {
       fontFamily: "var(--fontfamily-primary)",
       fontWeight: 600,
@@ -19,6 +28,7 @@ export const textStyles = defineTextStyles({
       lineHeight: { base: "3.5rem", desktop: "4.25rem" },
     },
   },
+
   "subtitle.1": {
     description: "Subtitle 1",
     value: {
@@ -28,12 +38,31 @@ export const textStyles = defineTextStyles({
       lineHeight: { base: "1.375rem", desktop: "2rem" },
     },
   },
+  "subtitle.2": {
+    description: "Subtitle 1",
+    value: {
+      fontFamily: "var(--fontfamily-primary)",
+      fontWeight: 600,
+      fontSize: { base: "1.8rem", desktop: "1.8rem" },
+      lineHeight: { base: "1.375rem", desktop: "2rem" },
+    },
+  },
+
   "body.1": {
     description: "Body 1",
     value: {
-      fontFamily: "var(--fontfamily-primary)",
+      fontFamily: "var(--fontfamily-tertiary)",
       fontWeight: 400,
       fontSize: { base: "0.9375rem", desktop: "0.875rem" },
+      lineHeight: { base: "1.375rem", desktop: "1.5rem" },
+    },
+  },
+  "body.2": {
+    description: "Body 1",
+    value: {
+      fontFamily: "var(--fontfamily-tertiary)",
+      fontWeight: 400,
+      fontSize: { base: "1rem", desktop: "1rem" },
       lineHeight: { base: "1.375rem", desktop: "1.5rem" },
     },
   },
@@ -74,9 +103,10 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "var(--fontfamily-primary)",
       fontWeight: 500,
-      fontSize: { base: "0.8125rem", desktop: "0.775rem" },
+      fontSize: { base: "0.85rem", desktop: "0.775rem" },
       lineHeight: { base: "0.9375rem", desktop: "1rem" },
       letterSpacing: "0.030rem",
+      textTransform: "uppercase",
     },
   },
   eyebrow: {
@@ -84,7 +114,7 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "var(--fontfamily-primary)",
       fontWeight: 400,
-      fontSize: { base: "0.9375rem", desktop: "0.8rem" },
+      fontSize: { base: "0.9375rem", desktop: "0.9rem" },
       lineHeight: { base: "1.375rem", desktop: "1.5rem" },
       textTransform: "uppercase",
       letterSpacing: "0.060rem",

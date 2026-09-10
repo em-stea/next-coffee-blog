@@ -15,11 +15,6 @@ const config = defineConfig({
     },
     tokens: {
       colors,
-      fonts: {
-        heading: { value: "var(--fontfamily-primary)" },
-        body: { value: "var(--fontfamily-primary)" },
-        footer: { value: "var(--fontfamily-secondary)" },
-      },
     },
     textStyles,
     recipes: {
@@ -29,8 +24,8 @@ const config = defineConfig({
   },
   globalCss: {
     "html, body": {
-      bg: "neutral.0",
-      color: "neutral.900",
+      bg: "neutral.900",
+      color: "neutral.0",
       minH: "100%",
     },
     body: {

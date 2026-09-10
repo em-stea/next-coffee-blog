@@ -46,11 +46,16 @@ export const HeroTextSection = ({
       <Heading
         textStyle="subtitle.1"
         color="neutral.0"
-        maxW={{ base: "80%", lg: "full" }}
+        maxW={{ base: "90%", lg: "full" }}
       >
         {subtitle}
       </Heading>
-      <HStack mt="6" gap="3">
+      <HStack
+        mt="6"
+        gap="3"
+        w="full"
+        justifyContent={{ base: "space-between", desktop: "flex-start" }}
+      >
         {BUTTONS.map((button) => (
           <Button
             key={button.label}

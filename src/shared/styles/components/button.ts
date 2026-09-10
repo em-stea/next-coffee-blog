@@ -23,6 +23,7 @@ export const buttonRecipe = defineRecipe({
         textStyle: "body.2.semibold",
         bg: "neutral.900",
         color: "neutral.0",
+        flex: "1",
         _hover: { bg: "coffee.900" },
       },
       outline: {
@@ -31,6 +32,7 @@ export const buttonRecipe = defineRecipe({
         color: "amber.500",
         borderWidth: "1px",
         borderColor: "amber.500",
+        flex: "1",
         _hover: {
           bg: "transparent",
           color: "amber.400",
@@ -42,7 +44,7 @@ export const buttonRecipe = defineRecipe({
         textStyle: "button.1",
         px: 0,
         _hover: {
-          color: "neutral.200",
+          color: "amber.500",
         },
       },
     },
@@ -58,7 +60,8 @@ export const buttonRecipe = defineRecipe({
       lg: {
         px: "1.25rem",
         py: "0.75rem",
-        minW: "200px",
+        w: { base: "full", desktop: "200px" },
+        maxW: { base: "full", desktop: "200px" },
       },
     },
     isInverted: {

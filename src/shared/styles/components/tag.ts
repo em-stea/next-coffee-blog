@@ -23,8 +23,8 @@ export const tagSlotRecipe = defineSlotRecipe({
           borderColor: "neutral.0",
           color: "amber.500",
           gap: "2",
-          px: 2,
           py: 1,
+          px: 3,
         },
         label: {
           textStyle: "tag.1",
@@ -47,7 +47,19 @@ export const tagSlotRecipe = defineSlotRecipe({
         },
         label: {
           textStyle: "tag.1",
-          textTransform: "uppercase",
+        },
+      },
+      fundamental: {
+        root: {
+          bg: "coffee.700",
+          border: "1px solid",
+          borderColor: "neutral.0",
+          color: "neutral.0",
+          px: 3,
+          py: 1,
+        },
+        label: {
+          textStyle: "tag.1",
         },
       },
     },
