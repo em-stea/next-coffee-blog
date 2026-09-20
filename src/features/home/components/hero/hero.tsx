@@ -1,4 +1,4 @@
-import { CoffeeDrinkInterface } from "@/features/coffee-drinks/types/coffee-drink";
+import { CoffeeDrinkInterface } from "@/features/home/types/coffee-drink";
 import { Box, Grid, GridItem, Image, VStack } from "@chakra-ui/react";
 import { MainFeaturedCard } from "./main-featured-card";
 import { HeroTextSection } from "./hero-text-section";

@@ -56,6 +56,18 @@ export const cardSlotRecipe = defineSlotRecipe({
           gap: 2,
         },
       },
+      duo: {
+        root: {
+          border: "1px solid",
+          borderColor: "neutral.100",
+          borderTop: "4px solid",
+          borderTopColor: "amber.500",
+        },
+        header: {
+          p: 0,
+          h: "28.5rem",
+        },
+      },
     },
   },
   defaultVariants: {

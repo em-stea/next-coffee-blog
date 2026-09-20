@@ -32,7 +32,6 @@ const LogoLinkItem: FC<ItemProps<LogoProps>> = ({ data }) => {
         boxSize="35px"
         color="neutral.900"
         _hover={{
-          // color: "coffee.700",
           "& .cup-fill": { fill: "coffee.700" },
         }}
         cursor="pointer"

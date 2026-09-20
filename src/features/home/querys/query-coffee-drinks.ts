@@ -7,7 +7,7 @@ type QueryCoffeeDrinksProps = {
 
 export const queryCoffeeDrinks = ({
   pageSize = 100,
-  sort = ["sortOrder:asc", "name:asc"],
+  sort = ["sortOrder:asc"],
 }: QueryCoffeeDrinksProps = {}) =>
   qs.stringify(
     {
@@ -17,9 +17,9 @@ export const queryCoffeeDrinks = ({
         "description",
         "servingSize",
         "instructions",
-        "sortOrder",
         "foamType",
         "espressoShots",
+        "sortOrder",
       ],
       populate: {
         cover: {

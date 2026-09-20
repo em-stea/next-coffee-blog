@@ -1,9 +1,5 @@
-import {
-  ApiResponse,
-  StrapiEntry,
-  StrapiMedia,
-} from "@/shared/types/strapi-response";
 import { MilkRatioInterface } from "@/features/milk-ratios/types/milk-ratio";
+import { ApiResponse, StrapiMedia } from "@/shared/types/strapi-response";
 
 export type ServingSize =
   | "Small (30 - 60 ml)"
@@ -21,7 +17,7 @@ export type EspressoShots =
   | "Quad (4 shots)"
   | "Ristretto (Short, concentrated extraction)";
 
-export interface CoffeeDrinkInterface extends StrapiEntry {
+export interface CoffeeDrinkInterface {
   name: string;
   slug: string;
   description: string;
@@ -31,6 +27,7 @@ export interface CoffeeDrinkInterface extends StrapiEntry {
   foamType: FoamType;
   espressoShots: EspressoShots;
   milk_ratio: MilkRatioInterface;
+  sortOrder: number;
 }
 
 export type CoffeeDrinkResponse = ApiResponse<CoffeeDrinkInterface[]>;

@@ -1,8 +1,8 @@
-import { CoffeeDrinkInterface } from "@/features/coffee-drinks/types/coffee-drink";
+import { CoffeeDrinkInterface } from "@/features/home/types/coffee-drink";
 import { ArrowRightIcon } from "@/shared/components/icons";
-import { ResponsivePicture } from "@/shared/components/responsive-picture/responsive-picture";
+import { ScaledImage } from "@/shared/components/scaled-image/scaled-image";
 import { ROUTES } from "@/shared/lib/route";
-import { Box, Button, Card, Heading, HStack, Tag } from "@chakra-ui/react";
+import { Button, Card, Heading, HStack, Tag } from "@chakra-ui/react";
 import Link from "next/link";
 import { InfoBox } from "./info-box-card";
 
@@ -15,20 +15,8 @@ export function MainFeaturedCard({ drink }: { drink: CoffeeDrinkInterface }) {
         <Tag.Label>featured drink</Tag.Label>
       </Tag.Root>
 
-      <Box overflow="hidden" position="relative">
-        <ResponsivePicture
-          image={cover}
-          alt={cover.alternativeText || ""}
-          forceSize={{ mobile: "small", desktop: "large" }}
-          transform="scale(1)"
-          transition="transform"
-          transitionTimingFunction="ease-in-out"
-          transitionDuration="fast"
-          _groupHover={{
-            transform: "scale(1.05)",
-          }}
-        />
-      </Box>
+      <ScaledImage cover={cover} />
+
       <Card.Header>
         <Heading
           textStyle="subtitle.3"

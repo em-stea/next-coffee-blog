@@ -20,7 +20,6 @@ export interface LogoProps {
 export type HeaderProps = LinkProps | LogoProps | ButtonLinkProps;
 
 export const HEADER_MAIN_LINKS: HeaderProps[] = [
-  { href: ROUTES.home, variant: "logo" },
   { title: "DRINKS", href: ROUTES.coffeeDrinks, variant: "text" },
   { title: "VARIETIES", href: ROUTES.coffeeVarieties, variant: "text" },
   { title: "BREW", href: ROUTES.brewMethods, variant: "text" },

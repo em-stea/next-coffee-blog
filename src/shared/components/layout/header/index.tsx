@@ -11,9 +11,6 @@ import { HeaderMobile } from "./header-mobile";
 import { NavBarIcon } from "./navbar-icon-mobile";
 import useBreakpoint from "@/shared/hooks/use-breakpoint";
 
-const LOGO_LINK = HEADER_MAIN_LINKS.find((link) => link.variant === "logo")!;
-const NAV_LINKS = HEADER_MAIN_LINKS.filter((link) => link.variant !== "logo");
-
 export default function Header() {
   const stickyBox = useRef<HTMLDivElement>(null);
   const { isLargerThanMD } = useBreakpoint();
@@ -45,10 +42,10 @@ export default function Header() {
           justifyContent="space-between"
           display={{ base: "none", desktop: "flex" }}
         >
-          <HeaderItem data={LOGO_LINK} />
+          <HeaderItem data={{ href: ROUTES.home, variant: "logo" }} />
 
           <HStack gap={8} alignItems="center">
-            {NAV_LINKS.map((link) => (
+            {HEADER_MAIN_LINKS.map((link) => (
               <HeaderItem key={link.href} data={link} />
             ))}
             <HeaderItem data={HEADER_SIDE_LINK} />
