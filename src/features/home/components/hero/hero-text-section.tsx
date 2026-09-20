@@ -57,13 +57,7 @@ export const HeroTextSection = ({
         justifyContent={{ base: "space-between", desktop: "flex-start" }}
       >
         {BUTTONS.map((button) => (
-          <Button
-            key={button.label}
-            variant={button.variant}
-            isInverted={button.isInverted}
-            asChild
-            size="lg"
-          >
+          <Button key={button.label} variant={button.variant} asChild size="lg">
             <Link href={button.href}>{button.label}</Link>
           </Button>
         ))}

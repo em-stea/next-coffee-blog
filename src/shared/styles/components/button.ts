@@ -21,10 +21,13 @@ export const buttonRecipe = defineRecipe({
     variant: {
       solid: {
         textStyle: "body.2.semibold",
-        bg: "neutral.900",
-        color: "neutral.0",
+        bg: "amber.500",
+        color: "coffee.900",
         flex: "1",
-        _hover: { bg: "coffee.900" },
+        _hover: {
+          bg: "amber.400",
+          color: "coffee.900",
+        },
       },
       outline: {
         textStyle: "body.2.semibold",
@@ -74,11 +77,11 @@ export const buttonRecipe = defineRecipe({
       variant: "solid",
       isInverted: true,
       css: {
-        bg: "amber.500",
-        color: "coffee.900",
+        color: "neutral.0",
+        bg: "neutral.900",
         _hover: {
-          bg: "amber.400",
-          color: "coffee.900",
+          color: "neutral.0",
+          bg: "coffee.900",
         },
       },
     },

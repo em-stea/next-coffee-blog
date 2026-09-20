@@ -46,7 +46,7 @@ const ButtonLinkItem: FC<ItemProps<ButtonLinkProps>> = ({ data }) => {
     <Button
       variant="solid"
       size="md"
-      isInverted={isLargerThanMD ? false : true}
+      isInverted={isLargerThanMD ? true : false}
       asChild
     >
       <Link href={data.href || "/"}>{data.title}</Link>

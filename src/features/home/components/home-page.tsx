@@ -10,6 +10,7 @@ import { CoffeeFundamentals } from "./coffee-fundamentals/coffee-fundamentals";
 import { EssentialDuo } from "./essential-duo/essential-duo";
 import { getBrewMethods } from "../services/get-brew-methods";
 import { queryBrewMethods } from "../querys/query-brew-methods";
+import { StickySection } from "./sticky-section/sticky-section";
 
 const FEATURED_DRINK_SLUG = "cold-brew";
 
@@ -40,7 +41,6 @@ export async function HomePage() {
   if (!featuredDrink || drinksList.length === 0 || brewMethodsList.length === 0)
     notFound();
 
-  console.log(brewMethodsList, "brewMethodsList");
   return (
     <>
       <Hero
@@ -60,6 +60,7 @@ export async function HomePage() {
         description="Comparative analysis of the two primary dynamics: atmospheric gravity percolation versus high-pressure hydrostatic injection."
         brewMethods={brewMethodsList}
       />
+      <StickySection />
     </>
   );
 }

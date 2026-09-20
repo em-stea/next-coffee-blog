@@ -50,7 +50,7 @@ export const HeaderMobile: FC<HeaderMobileProps> = ({
                         <Text
                           onClick={onCloseMenu}
                           color="neutral.0"
-                          textStyle="subtitle.2"
+                          textStyle="body.2.semibold"
                           cursor="pointer"
                           letterSpacing="0.04em"
                         >

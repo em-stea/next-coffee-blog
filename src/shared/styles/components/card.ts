@@ -14,7 +14,7 @@ export const cardSlotRecipe = defineSlotRecipe({
       featured: {
         root: {
           w: { base: "full", lg: "500px" },
-          h: { base: "400px", lg: "550px" },
+          h: { base: "450px", lg: "550px" },
           border: "1px solid",
           borderColor: "neutral.700",
         },

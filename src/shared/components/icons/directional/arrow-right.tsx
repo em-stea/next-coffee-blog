@@ -3,7 +3,7 @@
 import { createIcon } from "@chakra-ui/react";
 
 export const ArrowRightIcon = createIcon({
-  displayName: "ChevronRightIcon",
+  displayName: "ArrowRightIcon",
   viewBox: "0 0 16 16",
   path: (
     <svg
