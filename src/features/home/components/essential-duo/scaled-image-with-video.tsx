@@ -35,8 +35,10 @@ export const ScaledImageWithVideo = ({ cover, videoUrl }: ScaledImageProps) => {
     <Box
       overflow="hidden"
       position="relative"
+      h={{ base: "auto", desktop: "28.5rem" }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      transition="box-shadow 0.3s ease-in-out"
     >
       {/* Capa Base: Imagen */}
       <ScaledImage cover={cover} />

@@ -20,7 +20,10 @@ export const EssentialDuo = ({
     <Container>
       <HeaderBlock eyebrow={eyebrow} title={title} description={description} />
 
-      <Grid templateColumns="repeat(2, 1fr)" gap="4">
+      <Grid
+        templateColumns={{ base: "repeat(1, 1fr)", desktop: "repeat(2, 1fr)" }}
+        gap="4"
+      >
         {brewMethods.map((brewMethod, index) => (
           <GridItem key={index}>
             <CardDuo brewMethod={brewMethod} />

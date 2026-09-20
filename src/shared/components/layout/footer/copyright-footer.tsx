@@ -6,12 +6,15 @@ import { CupIcon } from "../../icons";
 export async function CopyrightFooter() {
   return (
     <HStack
-      h="6rem"
+      h={{ base: "auto", desktop: "6rem" }}
       px="6"
+      py={{ base: "6", desktop: 0 }}
       w="full"
       bg="neutral.300"
       color="neutral.900"
       justifyContent="space-between"
+      flexDirection={{ base: "column", desktop: "row" }}
+      gap={{ base: 4, desktop: 0 }}
     >
       <HStack gap="3">
         <CupIcon width="2rem" height="2rem" />

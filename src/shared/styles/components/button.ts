@@ -42,7 +42,7 @@ export const buttonRecipe = defineRecipe({
       "text-link": {
         color: "neutral.0",
         textStyle: "button.1",
-        px: 0,
+        p: 0,
         _hover: {
           color: "amber.500",
         },

@@ -15,8 +15,11 @@ export const queryBrewMethods = ({
         "name",
         "slug",
         "description",
+        "difficulty",
         "method_type",
         "extraction_type",
+        "brew_time",
+        "time_note",
         "sortOrder",
       ],
       populate: {
@@ -25,6 +28,12 @@ export const queryBrewMethods = ({
         },
         video: {
           fields: ["url"],
+        },
+        coffee_ratio: {
+          fields: ["ratio", "detail"],
+        },
+        grind_size: {
+          fields: ["name", "slug", "description"],
         },
       },
       pagination: {

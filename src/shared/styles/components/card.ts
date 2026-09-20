@@ -65,7 +65,18 @@ export const cardSlotRecipe = defineSlotRecipe({
         },
         header: {
           p: 0,
-          h: "28.5rem",
+          h: { base: "auto", desktop: "28.5rem" },
+        },
+        body: {
+          px: { base: 4, desktop: 6 },
+          py: { base: 6, desktop: 6 },
+        },
+        footer: {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 4,
+          px: { base: 4, desktop: 6 },
         },
       },
     },
