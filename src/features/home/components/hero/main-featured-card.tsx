@@ -31,6 +31,7 @@ export function MainFeaturedCard({ drink }: { drink: CoffeeDrinkInterface }) {
       </Box>
       <Card.Header>
         <Heading
+          textStyle="subtitle.3"
           color="neutral.0"
           transition="color 0.3s ease"
           _groupHover={{ color: "amber.500" }}
