@@ -30,11 +30,7 @@ export const CoffeeFundamentals = ({
       >
         <VStack alignItems="flex-start" gap="2">
           <Text textStyle="body.2.semibold">{eyebrow}</Text>
-          <Heading
-            textStyle="title.2"
-            w={{ base: "100%", desktop: "70%" }}
-            textTransform="uppercase"
-          >
+          <Heading textStyle="title.2" w={{ base: "100%", desktop: "70%" }}>
             {title}
           </Heading>
         </VStack>

@@ -13,7 +13,7 @@ export const textStyles = defineTextStyles({
   "title.2": {
     description: "Title 2",
     value: {
-      fontFamily: "var(--fontfamily-secondary)",
+      fontFamily: "var(--fontfamily-primary)",
       fontWeight: 600,
       fontSize: { base: "2.75rem", desktop: "3rem" },
       lineHeight: { base: "3.5rem", desktop: "3.45rem" },

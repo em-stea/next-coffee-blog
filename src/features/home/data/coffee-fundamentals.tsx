@@ -1,3 +1,10 @@
+import {
+  CupWarmIcon,
+  CoffeeBeanIcon,
+  ToolCoffeeIcon,
+  FrenchPressIcon,
+} from "@/shared/components/icons";
+
 export type CoffeeFundamentals = {
   tag: string;
   title: string;
@@ -6,6 +13,7 @@ export type CoffeeFundamentals = {
     label: string;
     href: string;
   };
+  icon?: React.ReactNode;
 };
 
 export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
@@ -18,6 +26,7 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
       label: "Browse recipes",
       href: "/",
     },
+    icon: <CupWarmIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />,
   },
   {
     tag: "Protocols",
@@ -28,6 +37,9 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
       label: "View Protocols",
       href: "/",
     },
+    icon: (
+      <FrenchPressIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />
+    ),
   },
   {
     tag: "Equipment",
@@ -38,6 +50,9 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
       label: "Discover gear",
       href: "/",
     },
+    icon: (
+      <ToolCoffeeIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />
+    ),
   },
   {
     tag: "Varietals",
@@ -48,5 +63,8 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
       label: "Learn origins",
       href: "/",
     },
+    icon: (
+      <CoffeeBeanIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />
+    ),
   },
 ];
