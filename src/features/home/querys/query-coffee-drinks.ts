@@ -28,6 +28,9 @@ export const queryCoffeeDrinks = ({
         milk_ratio: {
           fields: ["name", "slug", "description"],
         },
+        drinks_category: {
+          fields: ["name", "slug"],
+        },
       },
       pagination: {
         pageSize,

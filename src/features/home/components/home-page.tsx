@@ -3,13 +3,12 @@ import { getCoffeeDrinks } from "@/shared/services/get-coffee-drinks";
 
 import { Hero } from "@/features/home/components/hero/hero";
 
-import { CoffeeDrinkInterface } from "@/features/home/types/coffee-drink";
 import { notFound } from "next/navigation";
+import { queryBrewMethods } from "../querys/query-brew-methods";
 import { queryCoffeeFeaturedDrink } from "../querys/query-coffee-featured-drink";
+import { getBrewMethods } from "../services/get-brew-methods";
 import { CoffeeFundamentals } from "./coffee-fundamentals/coffee-fundamentals";
 import { EssentialDuo } from "./essential-duo/essential-duo";
-import { getBrewMethods } from "../services/get-brew-methods";
-import { queryBrewMethods } from "../querys/query-brew-methods";
 import { StickySection } from "./sticky-section/sticky-section";
 
 const FEATURED_DRINK_SLUG = "cold-brew";
@@ -34,11 +33,7 @@ export async function HomePage() {
     getBrewMethods(queryBrewMethods({ pageSize: 2, sort: ["sortOrder:asc"] })),
   ]);
 
-  const featuredDrink = selectedDrink?.data[0];
-  const drinksList = drinks?.data || [];
-  const brewMethodsList = brewMethods?.data || [];
-
-  if (!featuredDrink || drinksList.length === 0 || brewMethodsList.length === 0)
+  if (!selectedDrink || drinks.length === 0 || brewMethods.length === 0)
     notFound();
 
   return (
@@ -47,7 +42,7 @@ export async function HomePage() {
         eyebrow={"SPECIALTY COFFEE \u00A0\ //  \u00A0\ GUIDE & CULTURE"}
         title="The art, origin and ritual of specialty coffee."
         subtitle="From bean harvesting to your ultimate home brew."
-        featuredDrink={featuredDrink as CoffeeDrinkInterface}
+        selectedDrink={selectedDrink[0]}
       />
       <CoffeeFundamentals
         eyebrow={"YIELD & ORIGIN \u00A0\ // \u00A0\EXPLORE THE CRAFT"}
@@ -58,7 +53,7 @@ export async function HomePage() {
         eyebrow="EXPERIMENTAL STANDARDS"
         title="Essential Extraction Duo"
         description="Comparative analysis of the two primary dynamics: atmospheric gravity percolation versus high-pressure hydrostatic injection."
-        brewMethods={brewMethodsList}
+        brewMethods={brewMethods}
       />
       <StickySection />
     </>

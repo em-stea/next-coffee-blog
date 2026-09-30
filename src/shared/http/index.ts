@@ -1,6 +1,4 @@
-type FetchResponse<T> = {
-  data: T;
-};
+type FetchResponse<T> = T;
 
 const requireEnv = (name: string) => {
   const value = process.env[name];
@@ -27,9 +25,7 @@ const parseJsonResponse = async <T>(response: Response): Promise<T> => {
       response.status === 401
         ? " Check STRAPI_API_TOKEN in next-blog/.env (create a new token in Strapi Admin → Settings → API Tokens)."
         : "";
-    throw new Error(
-      (errorBody || `API error: ${response.status}`) + hint,
-    );
+    throw new Error((errorBody || `API error: ${response.status}`) + hint);
   }
 
   return response.json() as Promise<T>;
@@ -74,6 +70,6 @@ export const httpSecure = {
       );
     }
 
-    return { data: await parseJsonResponse<T>(response) };
+    return await parseJsonResponse<T>(response);
   },
 };

@@ -1,3 +1,4 @@
+import { DrinkCategoryInterface } from "@/features/drinks/types/drinks-categories";
 import { MilkRatioInterface } from "@/features/milk-ratios/types/milk-ratio";
 import { ApiResponse, StrapiMedia } from "@/shared/types/strapi-response";
 
@@ -28,6 +29,7 @@ export interface CoffeeDrinkInterface {
   espressoShots: EspressoShots;
   milk_ratio: MilkRatioInterface;
   sortOrder: number;
+  drinks_category: DrinkCategoryInterface;
 }
 
 export type CoffeeDrinkResponse = ApiResponse<CoffeeDrinkInterface[]>;

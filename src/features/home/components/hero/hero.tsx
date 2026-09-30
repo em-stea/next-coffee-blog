@@ -7,10 +7,10 @@ type HeroProps = {
   eyebrow: string;
   title: string;
   subtitle: string;
-  featuredDrink: CoffeeDrinkInterface;
+  selectedDrink: CoffeeDrinkInterface;
 };
 
-export function Hero({ eyebrow, title, subtitle, featuredDrink }: HeroProps) {
+export function Hero({ eyebrow, title, subtitle, selectedDrink }: HeroProps) {
   return (
     <VStack h="100vh">
       <Box overflow="hidden" position="relative" h="full" w="full">
@@ -43,7 +43,7 @@ export function Hero({ eyebrow, title, subtitle, featuredDrink }: HeroProps) {
             justifyContent="flex-end"
             alignItems={{ base: "flex-start", lg: "center" }}
           >
-            <MainFeaturedCard drink={featuredDrink} />
+            <MainFeaturedCard drink={selectedDrink} />
           </GridItem>
         </Grid>
 
