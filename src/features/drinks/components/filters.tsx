@@ -11,11 +11,9 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { useState } from "react";
-import { DrinkCategoryInterface } from "../types/drinks-categories";
 import { LuSearch, LuX } from "react-icons/lu";
-import { useDebounceValue } from "usehooks-ts";
-import { normalizeText } from "../utils/normalize-text";
+import { useDrinkFilters } from "../hooks/use-drink-filters";
+import { DrinkCategoryInterface } from "../types/drinks-categories";
 
 interface FiltersProps {
   drinks: CoffeeDrinkInterface[];
@@ -23,24 +21,15 @@ interface FiltersProps {
 }
 
 export function Filters({ drinks, categories }: FiltersProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [debouncedSearchQuery] = useDebounceValue(searchQuery, 300);
+  const {
+    selectedCategory,
+    setSelectedCategory,
+    searchQuery,
+    setSearchQuery,
+    filteredDrinks,
+  } = useDrinkFilters({ drinks });
 
   const allCategories = [{ name: "All Drinks", slug: "all" }, ...categories];
-
-  const filteredDrinks = drinks.filter((drink) => {
-    const matchesCategory =
-      selectedCategory === "all" ||
-      drink.drinks_category?.slug === selectedCategory;
-
-    const query = normalizeText(debouncedSearchQuery);
-    const drinkName = normalizeText(drink.name);
-    const matchesSearch = drinkName.includes(query);
-
-    return matchesCategory && matchesSearch;
-  });
 
   return (
     <>
