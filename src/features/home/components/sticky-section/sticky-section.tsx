@@ -22,7 +22,7 @@ export const StickySection = () => {
       templateColumns={{ base: "1fr", desktop: "repeat(2, 1fr)" }}
       alignItems="flex-start"
       bg="neutral.800"
-      my="20"
+      mt="20"
       pb={{ base: "16", desktop: 0 }}
     >
       {/* Columna Izquierda: STICKY */}

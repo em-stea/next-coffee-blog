@@ -1,5 +1,5 @@
 import { queryCoffeeDrinks } from "@/features/home/querys/query-coffee-drinks";
-import { getCoffeeDrinks } from "@/features/home/services/get-coffee-drinks";
+import { getCoffeeDrinks } from "@/shared/services/get-coffee-drinks";
 
 import { Hero } from "@/features/home/components/hero/hero";
 

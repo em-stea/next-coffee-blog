@@ -1,4 +1,4 @@
-import { getCoffeeDrinks } from "../../home/services/get-coffee-drinks";
+import { getCoffeeDrinks } from "../../../shared/services/get-coffee-drinks";
 import { queryCoffeeDrinkBySlug } from "../../home/querys/query-coffee-drinks";
 
 export const getCoffeeDrinkBySlug = async (slug: string) => {
