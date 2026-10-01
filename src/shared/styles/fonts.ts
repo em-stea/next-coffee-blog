@@ -20,13 +20,13 @@ export const Interstate = localFont({
 export const InterstateCondensed = localFont({
   src: [
     {
-      path: "../../../public/fonts/interstate-condensed-bold.woff",
-      weight: "600",
+      path: "../../../public/fonts/interstate-bold-condensed.woff",
+      weight: "700",
       style: "normal",
     },
     {
       path: "../../../public/fonts/interstate-black-condensed.woff",
-      weight: "600",
+      weight: "900",
       style: "normal",
     },
   ],

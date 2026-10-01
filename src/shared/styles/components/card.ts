@@ -80,8 +80,6 @@ export const cardSlotRecipe = defineSlotRecipe({
       },
       drink: {
         root: {
-          // border: "1px solid",
-          // borderColor: "neutral.700",
           color: "neutral.0",
           position: "relative",
           bg: "neutral.800",
@@ -114,7 +112,7 @@ export const cardSlotRecipe = defineSlotRecipe({
         },
         header: {
           p: 0,
-          h: { base: "auto", desktop: "27rem" },
+          h: { base: "17rem", desktop: "27rem" },
           overflow: "hidden",
           position: "relative",
         },
@@ -122,6 +120,7 @@ export const cardSlotRecipe = defineSlotRecipe({
           p: 4,
           minH: "14.6rem",
           justifyContent: "space-between",
+          gap: "0",
         },
         footer: {
           display: "flex",

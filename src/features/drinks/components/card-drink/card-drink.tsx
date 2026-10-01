@@ -40,10 +40,8 @@ export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
           />
         </Card.Header>
         <Card.Body>
-          <VStack align="flex-start">
-            <Heading textStyle="subtitle.2" pb="2">
-              {name}
-            </Heading>
+          <VStack align="flex-start" gap="3">
+            <Heading textStyle="subtitle.2">{name}</Heading>
             <Text textStyle="body.1">{description}</Text>
           </VStack>
           <VStack
@@ -55,8 +53,9 @@ export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
               transition: "border-color 0.5s ease",
             }}
             p="2"
-            mt="2"
+            mt="3"
             borderRadius="8px"
+            gap={{ base: "2", desktop: "1" }}
           >
             <DetailBoxDrink label="Espresso Shots" value={espressoShots} />
             <DetailBoxDrink label="Foam type" value={foamType} />

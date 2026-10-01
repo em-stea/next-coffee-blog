@@ -1,6 +1,15 @@
 import { defineTextStyles } from "@chakra-ui/react";
 
 export const textStyles = defineTextStyles({
+  "title.1-extra-big": {
+    description: "Title 1 Extra Big",
+    value: {
+      fontFamily: "var(--fontfamily-secondary)",
+      fontWeight: 900,
+      fontSize: { base: "6rem", desktop: "17rem" },
+      lineHeight: { base: "5rem", desktop: "14rem" },
+    },
+  },
   "title.1": {
     description: "Title 1",
     value: {

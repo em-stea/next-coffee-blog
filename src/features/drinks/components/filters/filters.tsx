@@ -16,14 +16,35 @@ export function DrinkFilters({ categories }: DrinkFiltersProps) {
   const allCategories = [{ name: "All Drinks", slug: "all" }, ...categories];
 
   return (
-    <HStack w="full" my="8" px="6" justify="space-between">
-      <HStack gap="4" justify="center">
+    <HStack
+      w="full"
+      mt="28"
+      px={{ base: 0, desktop: "28" }}
+      justify="space-between"
+      flexDirection={{ base: "column", desktop: "row" }}
+      overflow="hidden"
+      gap="8"
+    >
+      <HStack
+        gap="4"
+        justify={{ base: "flex-start", desktop: "center" }}
+        maxW="full"
+        minW="0"
+        overflowX="auto"
+        scrollbarWidth="none"
+      >
         {allCategories.map((category) => (
           <Button
             key={category.slug}
             variant={selectedCategory === category.slug ? "solid" : "outline"}
             onClick={() => setSelectedCategory(category.slug)}
             flex="0 0 auto"
+            _first={{
+              ml: 4,
+            }}
+            _last={{
+              mr: 4,
+            }}
           >
             {category.name}
           </Button>
@@ -31,7 +52,8 @@ export function DrinkFilters({ categories }: DrinkFiltersProps) {
       </HStack>
 
       <InputGroup
-        w="auto"
+        w={{ base: "full", desktop: "auto" }}
+        px={{ base: 4, desktop: 0 }}
         startElement={
           <Icon color="neutral.0">
             <LuSearch />
@@ -51,7 +73,7 @@ export function DrinkFilters({ categories }: DrinkFiltersProps) {
       >
         <Input
           placeholder="Filter by name"
-          w="auto"
+          w={{ base: "full", desktop: "auto" }}
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}

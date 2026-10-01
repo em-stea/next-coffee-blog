@@ -1,10 +1,10 @@
 import { FilteredContent } from "@/features/drinks/components/filtered-content";
+import { HeroDrink } from "@/features/drinks/components/hero-drink/hero-drink";
 import { DrinksProvider } from "@/features/drinks/providers/drinks-providers";
 import { queryDrinksCategories } from "@/features/drinks/querys/query-drinks-categories";
 import { getCoffeeDrinkCategories } from "@/features/drinks/services/get-drinks-categories";
 import { queryCoffeeDrinks } from "@/features/home/querys/query-coffee-drinks";
 import { getCoffeeDrinks } from "@/shared/services/get-coffee-drinks";
-import { Container } from "@chakra-ui/react";
 import { notFound } from "next/navigation";
 
 export default async function DrinksPage() {
@@ -16,10 +16,12 @@ export default async function DrinksPage() {
   if (drinks.length === 0) notFound();
 
   return (
-    <Container>
+    <>
+      <HeroDrink />
+
       <DrinksProvider drinks={drinks}>
         <FilteredContent categories={categories} />
       </DrinksProvider>
-    </Container>
+    </>
   );
 }

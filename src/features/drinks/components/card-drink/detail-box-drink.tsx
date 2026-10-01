@@ -7,7 +7,11 @@ interface DetailBoxDrinkProps {
 
 export function DetailBoxDrink({ label, value }: DetailBoxDrinkProps) {
   return (
-    <HStack>
+    <HStack
+      flexDirection={{ base: "column", desktop: "row" }}
+      alignItems={{ base: "flex-start", desktop: "center" }}
+      gap={{ base: 0, desktop: "2" }}
+    >
       <Text textStyle="body.1" color="neutral.0">
         {label}:
       </Text>
