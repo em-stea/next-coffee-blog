@@ -10,6 +10,16 @@ export const textStyles = defineTextStyles({
       lineHeight: { base: "5rem", desktop: "14rem" },
     },
   },
+  "title.2-extra-big": {
+    description: "Title 1 Extra Big",
+    value: {
+      fontFamily: "var(--fontfamily-secondary)",
+      fontWeight: 900,
+      fontSize: { base: "8rem", desktop: "31rem" },
+      lineHeight: { base: "5rem", desktop: "24rem" },
+      letterSpacing: { base: "-.2rem", desktop: "-.5rem" },
+    },
+  },
   "title.1": {
     description: "Title 1",
     value: {

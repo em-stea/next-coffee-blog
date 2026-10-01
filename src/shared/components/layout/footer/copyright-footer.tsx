@@ -1,33 +1,38 @@
-import { HStack, Skeleton, Text } from "@chakra-ui/react";
+import { Heading, HStack, Skeleton, Text, VStack } from "@chakra-ui/react";
 import { Suspense } from "react";
 import { YearDisplay } from "./year-display";
-import { CupIcon } from "../../icons";
 
 export async function CopyrightFooter() {
   return (
-    <HStack
-      h={{ base: "auto", desktop: "6rem" }}
-      px="6"
-      py={{ base: "6", desktop: 0 }}
+    <VStack
       w="full"
       bg="neutral.300"
       color="neutral.900"
       justifyContent="space-between"
-      flexDirection={{ base: "column", desktop: "row" }}
       gap={{ base: 4, desktop: 0 }}
+      pt="16"
     >
-      <HStack gap="3">
-        <CupIcon width="2rem" height="2rem" />
-        <Text textStyle="body.3.semibold">Cupping Desk</Text>
+      <HStack justifyContent="center" w="full" px="6">
+        <Heading textStyle="title.2-extra-big" textTransform="uppercase">
+          Typica
+        </Heading>
       </HStack>
 
-      <Text textStyle="body.1">
-        Copyright{" "}
-        <Suspense fallback={<Skeleton w="100px" h="10px" />}>
-          <YearDisplay />
-        </Suspense>{" "}
-        © Cupping Desk. All rights reserved.
-      </Text>
-    </HStack>
+      <HStack
+        borderTop="1px solid"
+        borderColor="neutral.400"
+        w="full"
+        justifyContent="center"
+        mt="2"
+      >
+        <Text textStyle="body.1" py="6">
+          Copyright{" "}
+          <Suspense fallback={<Skeleton w="100px" h="10px" />}>
+            <YearDisplay />
+          </Suspense>{" "}
+          © Typica. All rights reserved.
+        </Text>
+      </HStack>
+    </VStack>
   );
 }

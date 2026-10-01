@@ -1,14 +1,17 @@
-import { Button, Text } from "@chakra-ui/react";
+import { Button, HStack, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 import useBreakpoint from "@/shared/hooks/use-breakpoint";
 import { CupIcon } from "../../icons";
 import type { ButtonLinkProps, LinkProps, LogoProps } from "./data";
+import { motion, useScroll } from "framer-motion";
 
 interface ItemProps<T> {
   data: T;
 }
+
+const MotionBox = motion.create(HStack);
 
 const TextLinkItem: FC<ItemProps<LinkProps>> = ({ data }) => {
   return (
@@ -26,16 +29,50 @@ const TextLinkItem: FC<ItemProps<LinkProps>> = ({ data }) => {
 };
 
 const LogoLinkItem: FC<ItemProps<LogoProps>> = ({ data }) => {
+  const { scrollY } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    return scrollY.on("change", (latest) => {
+      setIsScrolled(latest > 20);
+    });
+  }, [scrollY]);
+
   return (
     <Link href={data.href} aria-label="Home">
-      <CupIcon
-        boxSize="35px"
-        color="neutral.900"
-        _hover={{
-          "& .cup-fill": { fill: "coffee.700" },
-        }}
-        cursor="pointer"
-      />
+      <HStack gap="4" justifyContent="flex-end" alignItems="flex-end">
+        <CupIcon
+          boxSize="35px"
+          color="neutral.900"
+          _hover={{
+            "& .cup-fill": { fill: "coffee.700" },
+          }}
+          cursor="pointer"
+        />
+        <MotionBox
+          overflow="hidden"
+          initial={false}
+          animate={{
+            x: isScrolled ? -20 : 0, // Se desplaza a la izquierda
+            opacity: isScrolled ? 0 : 1, // Desaparece con fade
+            maxWidth: isScrolled ? "0px" : "100px", // Contrae el espacio horizontal
+          }}
+          transition={{
+            duration: 0.35,
+            ease: "easeInOut",
+          }}
+          whiteSpace="nowrap"
+        >
+          <Text
+            textStyle="body.3.semibold"
+            color="neutral.900"
+            textTransform="uppercase"
+            lineHeight="1rem"
+          >
+            Typica
+          </Text>
+        </MotionBox>
+      </HStack>
     </Link>
   );
 };

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Cupping Desk",
+  title: "Typica",
   description:
     "A coffee journal covering drinks, varieties, brew methods, grinders, and gear.",
 };
