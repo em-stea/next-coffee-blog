@@ -28,8 +28,8 @@ export const tagSlotRecipe = defineSlotRecipe({
         },
         label: {
           textStyle: "tag.1",
+          lineHeight: "1.4rem",
           textTransform: "uppercase",
-          pb: "2px",
         },
       },
       featured: {
@@ -47,6 +47,7 @@ export const tagSlotRecipe = defineSlotRecipe({
         },
         label: {
           textStyle: "tag.1",
+          lineHeight: "1.4rem",
         },
       },
       fundamental: {
@@ -60,6 +61,7 @@ export const tagSlotRecipe = defineSlotRecipe({
         },
         label: {
           textStyle: "tag.1",
+          lineHeight: "1.4rem",
         },
       },
     },

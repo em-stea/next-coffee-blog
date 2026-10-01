@@ -1,4 +1,6 @@
-export async function YearDisplay() {
+"use client";
+
+export function YearDisplay() {
   const currentYear = new Date().getFullYear();
   return <>{currentYear}</>;
 }
