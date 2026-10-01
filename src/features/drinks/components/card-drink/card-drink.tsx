@@ -3,29 +3,16 @@
 import { CoffeeDrinkInterface } from "@/features/home/types/coffee-drink";
 import { ResponsivePicture } from "@/shared/components/responsive-picture/responsive-picture";
 import { Box, Card, Heading, Tag, Text, VStack } from "@chakra-ui/react";
-import { DetailBoxDrink } from "./detail-box-drink";
 import Link from "next/link";
-import { LuCoffee } from "react-icons/lu";
-import { useRef, useState } from "react";
-import { useEventListener, useHover } from "usehooks-ts";
-import Image from "next/image";
+import { useCursorPosition } from "../../hooks/use-cursor-position";
+import { CursorImage } from "./cursor-image";
+import { DetailBoxDrink } from "./detail-box-drink";
 
 export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
   const { name, description, cover, servingSize, espressoShots, foamType } =
     drink;
 
-  const cardRef = useRef<HTMLDivElement>(null);
-  const isHovered = useHover(cardRef as React.RefObject<HTMLElement>);
-
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-  useEventListener(
-    "mousemove",
-    (e) => {
-      setCursorPos({ x: e.clientX, y: e.clientY });
-    },
-    cardRef as React.RefObject<HTMLElement>,
-  );
+  const { cardRef, isHovered, cursorPos } = useCursorPosition();
 
   return (
     <Link href="/">
@@ -76,33 +63,7 @@ export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
           </VStack>
         </Card.Body>
 
-        {isHovered && (
-          <Box
-            position="fixed"
-            top={0}
-            left={0}
-            transform={`translate3d(${cursorPos.x - 30}px, ${cursorPos.y - 20}px, 0)`}
-            pointerEvents="none"
-            zIndex={9999}
-            color="neutral.0"
-            // bg="neutral.900"
-            // backdropFilter="blur(8px)"
-            p="2"
-            borderRadius="full"
-            // boxShadow="md"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {/* <LuCoffee size={20} /> */}
-            <Image
-              src="/cursor-image.png"
-              alt="Coffee"
-              width={120}
-              height={120}
-            />
-          </Box>
-        )}
+        {isHovered && <CursorImage cursorPos={cursorPos} />}
       </Card.Root>
     </Link>
   );

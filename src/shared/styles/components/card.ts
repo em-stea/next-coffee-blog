@@ -80,12 +80,36 @@ export const cardSlotRecipe = defineSlotRecipe({
       },
       drink: {
         root: {
-          border: "1px solid",
-          borderColor: "neutral.700",
+          // border: "1px solid",
+          // borderColor: "neutral.700",
           color: "neutral.0",
+          position: "relative",
+          bg: "neutral.800",
+          borderRadius: "16px",
+          p: "1px",
+          overflow: "hidden",
           _hover: {
             borderColor: "neutral.500",
             transition: "border-color 0.5s ease",
+            _before: {
+              opacity: 1,
+            },
+          },
+          _before: {
+            content: '""',
+            position: "absolute",
+            inset: 0,
+            borderRadius: "inherit",
+            padding: "1px",
+            background: `radial-gradient(350px circle at var(--x, -500px) var(--y, -500px), var(--chakra-colors-amber-500, #f59e0b), transparent 80%)`,
+            WebkitMask:
+              "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "xor",
+            maskComposite: "exclude",
+            opacity: 0,
+            transition: "opacity 0.3s ease",
+            pointerEvents: "none",
+            zIndex: 10,
           },
         },
         header: {
