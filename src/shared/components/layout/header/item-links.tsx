@@ -30,13 +30,16 @@ const TextLinkItem: FC<ItemProps<LinkProps>> = ({ data }) => {
 
 const LogoLinkItem: FC<ItemProps<LogoProps>> = ({ data }) => {
   const { scrollY } = useScroll();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(() => scrollY.get() > 20);
 
   useEffect(() => {
     return scrollY.on("change", (latest) => {
-      setIsScrolled(latest > 20);
+      // Solo actualizamos si superó los 20px y todavía no estaba marcado como scrolleado
+      if (latest > 20 && !isScrolled) {
+        setIsScrolled(true);
+      }
     });
-  }, [scrollY]);
+  }, [scrollY, isScrolled]);
 
   return (
     <Link href={data.href} aria-label="Home">
