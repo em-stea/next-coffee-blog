@@ -83,12 +83,21 @@ export const cardSlotRecipe = defineSlotRecipe({
           border: "1px solid",
           borderColor: "neutral.700",
           color: "neutral.0",
+          _hover: {
+            borderColor: "neutral.500",
+            transition: "border-color 0.5s ease",
+          },
         },
         header: {
           p: 0,
+          h: { base: "auto", desktop: "27rem" },
+          overflow: "hidden",
+          position: "relative",
         },
         body: {
           p: 4,
+          minH: "14.6rem",
+          justifyContent: "space-between",
         },
         footer: {
           display: "flex",

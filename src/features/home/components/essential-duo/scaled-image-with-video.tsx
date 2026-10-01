@@ -13,18 +13,15 @@ interface ScaledImageProps {
 }
 
 export const ScaledImageWithVideo = ({ cover, videoUrl }: ScaledImageProps) => {
-  const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
     if (videoUrl && videoRef.current) {
       videoRef.current.play().catch(() => {});
     }
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
     if (videoUrl && videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
@@ -56,7 +53,10 @@ export const ScaledImageWithVideo = ({ cover, videoUrl }: ScaledImageProps) => {
         w="100%"
         h="100%"
         objectFit="cover"
-        opacity={isHovered ? 1 : 0}
+        _groupHover={{
+          opacity: 1,
+        }}
+        opacity={0}
         transition="opacity 0.3s ease-in-out"
         pointerEvents="none"
         zIndex={1}
@@ -70,7 +70,10 @@ export const ScaledImageWithVideo = ({ cover, videoUrl }: ScaledImageProps) => {
         w="100%"
         h="100%"
         bg="blackAlpha.600"
-        opacity={isHovered ? 1 : 0}
+        opacity={0}
+        _groupHover={{
+          opacity: 1,
+        }}
         transition="opacity 0.3s ease-in-out"
         pointerEvents="none"
         zIndex={2}
