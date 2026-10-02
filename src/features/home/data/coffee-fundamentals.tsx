@@ -14,12 +14,13 @@ export type CoffeeFundamentals = {
     href: string;
   };
   icon?: React.ReactNode;
+  url: string;
 };
 
 export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
   {
     tag: "Recipes",
-    title: "Drinks",
+    title: "All about \n Drinks",
     description:
       "Flat White, Cortado, Cold Brew, and Espresso calibrated under precise liquid mass.",
     action: {
@@ -27,10 +28,11 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
       href: "/",
     },
     icon: <CupWarmIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />,
+    url: "/expanded-step-card-01.jpg",
   },
   {
     tag: "Protocols",
-    title: "Brew Methods",
+    title: "Brew \n Methods",
     description:
       "V60, AeroPress, French Press, Chemex, and 9-Bar Espresso extraction profiles.",
     action: {
@@ -40,10 +42,11 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
     icon: (
       <FrenchPressIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />
     ),
+    url: "/expanded-step-card-02.jpg",
   },
   {
     tag: "Equipment",
-    title: "Tools & Accessories",
+    title: "Tools & \n Accessories",
     description:
       "0.1g scales, tamping stands, 0.35mm WDT tools, and 150mm puck screens.",
     action: {
@@ -53,10 +56,11 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
     icon: (
       <ToolCoffeeIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />
     ),
+    url: "/expanded-step-card-03.jpg",
   },
   {
     tag: "Varietals",
-    title: "Varieties & Genetics",
+    title: "Varieties & \n Genetics",
     description:
       "Bourbon, Geisha, SL28, and Castillo: molecular density, genetics, and processing.",
     action: {
@@ -66,5 +70,6 @@ export const COFFEE_FUNDAMENTALS: CoffeeFundamentals[] = [
     icon: (
       <CoffeeBeanIcon boxSize="35px" _groupHover={{ color: "amber.700" }} />
     ),
+    url: "/expanded-step-card-04.jpg",
   },
 ];

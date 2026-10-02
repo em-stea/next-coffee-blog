@@ -85,6 +85,16 @@ export const buttonRecipe = defineRecipe({
         },
       },
     },
+    {
+      variant: "text-link",
+      isInverted: true,
+      css: {
+        color: "amber.500",
+        _hover: {
+          color: "amber.400",
+        },
+      },
+    },
   ],
   defaultVariants: {
     variant: "solid",

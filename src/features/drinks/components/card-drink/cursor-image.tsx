@@ -6,6 +6,8 @@ export const CursorImage = ({
 }: {
   cursorPos: { x: number; y: number };
 }) => {
+  if (cursorPos.x === 0 && cursorPos.y === 0) return null;
+
   return (
     <Box
       position="fixed"

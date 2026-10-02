@@ -37,22 +37,38 @@ export const cardSlotRecipe = defineSlotRecipe({
       },
       fundamental: {
         root: {
-          border: "1px solid",
-          borderColor: "neutral.100",
-          borderTop: "4px solid",
-          borderTopColor: "amber.500",
+          // border: "1px solid",
+          borderColor: "neutral.700",
+          bg: "neutral.800",
+          display: "flex",
+          w: "full",
           h: "full",
+          overflow: "hidden",
+          flexDirection: { base: "column-reverse", desktop: "row" },
+          gap: { base: 6, desktop: 0 },
+          p: 4,
           _hover: {
             bg: "neutral.800",
             transition: "background-color 0.5s ease",
           },
         },
         header: {
-          display: "flex",
-          flexDirection: "row",
           justifyContent: "space-between",
-          alignItems: "center",
-          gap: 2,
+          alignItems: "flex-start",
+          gap: { base: 6, desktop: 2 },
+          py: 0,
+          pl: 0,
+          flex: {
+            base: "none",
+            desktop:
+              "0 1 calc(var(--unit) - 2 * var(--card-pad) - 2 * var(--bw))",
+          },
+        },
+        body: {
+          p: 0,
+          borderRadius: "8px",
+          overflow: "hidden",
+          position: "relative",
         },
       },
       duo: {
