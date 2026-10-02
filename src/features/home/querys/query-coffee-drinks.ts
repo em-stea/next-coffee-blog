@@ -15,10 +15,8 @@ export const queryCoffeeDrinks = ({
         "name",
         "slug",
         "description",
-        "servingSize",
         "instructions",
         "foamType",
-        "espressoShots",
         "sortOrder",
       ],
       populate: {
@@ -30,6 +28,12 @@ export const queryCoffeeDrinks = ({
         },
         drinks_category: {
           fields: ["name", "slug"],
+        },
+        serving_size: {
+          fields: ["name", "minimumSize", "maximumSize"],
+        },
+        espresso_shot: {
+          fields: ["name", "minimumVolume", "maximumVolume"],
         },
       },
       pagination: {

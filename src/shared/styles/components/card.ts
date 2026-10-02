@@ -37,7 +37,6 @@ export const cardSlotRecipe = defineSlotRecipe({
       },
       fundamental: {
         root: {
-          // border: "1px solid",
           borderColor: "neutral.700",
           bg: "neutral.800",
           display: "flex",
@@ -141,6 +140,21 @@ export const cardSlotRecipe = defineSlotRecipe({
         footer: {
           display: "flex",
           justifyContent: "end",
+        },
+      },
+      highlight: {
+        root: {
+          border: "1px solid",
+          borderColor: "neutral.700",
+          borderRadius: "16px",
+          overflow: "hidden",
+          h: "full",
+        },
+        header: {
+          p: 0,
+          h: "25rem",
+          maxH: "25rem",
+          overflow: "hidden",
         },
       },
     },

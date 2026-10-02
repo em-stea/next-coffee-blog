@@ -1,3 +1,4 @@
+import { ComparisonGuide } from "@/features/drinks/components/comparison-guide/comparison-guide";
 import { FilteredContent } from "@/features/drinks/components/filtered-content";
 import { HeroDrink } from "@/features/drinks/components/hero-drink/hero-drink";
 import { DrinksProvider } from "@/features/drinks/providers/drinks-providers";
@@ -15,6 +16,7 @@ export default async function DrinksPage() {
 
   if (drinks.length === 0) notFound();
 
+  console.log(drinks);
   return (
     <>
       <HeroDrink />
@@ -22,6 +24,8 @@ export default async function DrinksPage() {
       <DrinksProvider drinks={drinks}>
         <FilteredContent categories={categories} />
       </DrinksProvider>
+
+      <ComparisonGuide drinks={drinks} />
     </>
   );
 }

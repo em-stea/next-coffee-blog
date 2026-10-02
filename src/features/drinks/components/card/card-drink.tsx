@@ -6,13 +6,16 @@ import { Box, Card, Heading, Tag, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { useCursorPosition } from "../../hooks/use-cursor-position";
 import { CursorImage } from "./cursor-image";
-import { DetailBoxDrink } from "./detail-box-drink";
+import { DetailBoxDrink } from "./detail-box-card-drink";
 
 export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
-  const { name, description, cover, servingSize, espressoShots, foamType } =
+  const { name, description, cover, serving_size, espresso_shot, foamType } =
     drink;
 
   const { cardRef, isHovered, cursorPos } = useCursorPosition();
+
+  const espressoShots = `${espresso_shot.name} ${espresso_shot.minimumVolume}ml - ${espresso_shot.maximumVolume}ml`;
+  const servingSize = `${serving_size.name} (${serving_size.minimumSize}ml - ${serving_size.maximumSize}ml)`;
 
   return (
     <Link href="/">

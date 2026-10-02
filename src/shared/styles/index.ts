@@ -15,6 +15,9 @@ const config = defineConfig({
     },
     tokens: {
       colors,
+      spacing: {
+        "21": { value: "5.5rem" }, // 88px
+      },
     },
     textStyles,
     recipes: {

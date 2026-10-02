@@ -72,7 +72,10 @@ export const ResponsivePicture = ({
       w="full"
       h="full"
       position="relative"
-      display="block"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      // display="block"
       overflow="hidden"
       {...props}
     >
@@ -101,6 +104,7 @@ export const ResponsivePicture = ({
         w="full"
         h="full"
         objectFit="cover"
+        objectPosition="center center"
         ref={imgRef}
         onLoad={onLoad}
         onError={onLoad}

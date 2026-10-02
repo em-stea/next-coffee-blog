@@ -3,6 +3,7 @@ import { cardSlotRecipe } from "./card";
 import { containerRecipe } from "./container";
 import { drawerSlotRecipe } from "./drawer";
 import { inputRecipe } from "./input";
+import { selectSlotRecipe } from "./select";
 import { tagSlotRecipe } from "./tag";
 
 export const recipes = {
@@ -15,4 +16,5 @@ export const slotRecipes = {
   card: cardSlotRecipe,
   tag: tagSlotRecipe,
   drawer: drawerSlotRecipe,
+  select: selectSlotRecipe,
 };

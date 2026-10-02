@@ -23,7 +23,7 @@ type FundamentalItemCardProps = {
 };
 
 const EASE = [0.33, 1, 0.68, 1] as const;
-const LAYOUT = { duration: 1.3, ease: EASE };
+const LAYOUT = { duration: 1.1, ease: EASE };
 
 export const FundamentalItemCard = ({
   index,

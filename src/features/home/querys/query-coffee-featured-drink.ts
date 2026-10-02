@@ -15,11 +15,9 @@ export const queryCoffeeFeaturedDrink = ({
         "name",
         "slug",
         "description",
-        "servingSize",
         "instructions",
         "sortOrder",
         "foamType",
-        "espressoShots",
       ],
       populate: {
         cover: {
@@ -27,6 +25,12 @@ export const queryCoffeeFeaturedDrink = ({
         },
         milk_ratio: {
           fields: ["name", "slug", "description"],
+        },
+        serving_size: {
+          fields: ["name", "minimumSize", "maximumSize"],
+        },
+        espresso_shot: {
+          fields: ["name", "minimumVolume", "maximumVolume"],
         },
       },
       pagination: {
