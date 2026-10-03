@@ -12,7 +12,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { SelectedCard } from "../card/selected-card";
+import { SelectedCard } from "../card/selected-card/selected-card";
 
 export interface ComparisonState {
   drinkA: CoffeeDrinkInterface | null;

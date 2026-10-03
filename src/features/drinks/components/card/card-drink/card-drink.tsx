@@ -4,25 +4,29 @@ import { CoffeeDrinkInterface } from "@/features/home/types/coffee-drink";
 import { ResponsivePicture } from "@/shared/components/responsive-picture/responsive-picture";
 import { Box, Card, Heading, Tag, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
-import { useCursorPosition } from "../../hooks/use-cursor-position";
+import { useCursorPosition } from "../../../hooks/use-cursor-position";
 import { CursorImage } from "./cursor-image";
 import { DetailBoxDrink } from "./detail-box-card-drink";
 
 export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
-  const { name, description, cover, serving_size, espresso_shot, foamType } =
-    drink;
+  const {
+    name,
+    description,
+    cover,
+    formattedServingSize,
+    formattedEspressoShot,
+    drink_recipe,
+  } = drink;
+  const { foam_type: foamType } = drink_recipe;
 
   const { cardRef, isHovered, cursorPos } = useCursorPosition();
-
-  const espressoShots = `${espresso_shot.name} ${espresso_shot.minimumVolume}ml - ${espresso_shot.maximumVolume}ml`;
-  const servingSize = `${serving_size.name} (${serving_size.minimumSize}ml - ${serving_size.maximumSize}ml)`;
 
   return (
     <Link href="/">
       <Card.Root variant="drink" className="group" ref={cardRef}>
         <Card.Header>
           <Tag.Root variant="featured" zIndex={3}>
-            <Tag.Label>{servingSize}</Tag.Label>
+            <Tag.Label>{formattedServingSize}</Tag.Label>
           </Tag.Root>
 
           <ResponsivePicture image={cover || {}} alt="Card Drink" />
@@ -60,8 +64,11 @@ export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
             borderRadius="8px"
             gap={{ base: "2", desktop: "1" }}
           >
-            <DetailBoxDrink label="Espresso Shots" value={espressoShots} />
-            <DetailBoxDrink label="Foam type" value={foamType} />
+            <DetailBoxDrink
+              label="Espresso Shots"
+              value={formattedEspressoShot}
+            />
+            <DetailBoxDrink label="Foam type" value={foamType || "No Foam"} />
           </VStack>
         </Card.Body>
 

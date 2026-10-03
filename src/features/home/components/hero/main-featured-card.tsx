@@ -7,7 +7,8 @@ import Link from "next/link";
 import { InfoBox } from "./info-box-card";
 
 export function MainFeaturedCard({ drink }: { drink: CoffeeDrinkInterface }) {
-  const { name, espressoShots, cover, servingSize } = drink;
+  const { name, cover, drink_recipe, formattedServingSize } = drink;
+  const { espresso_shot } = drink_recipe;
 
   return (
     <Card.Root variant="featured" className="group">
@@ -47,12 +48,12 @@ export function MainFeaturedCard({ drink }: { drink: CoffeeDrinkInterface }) {
         >
           <InfoBox
             label="Espresso Shots"
-            value={espressoShots}
+            value={espresso_shot?.name || "No Espresso"}
             _groupHover={{ borderColor: "amber.500" }}
           />
           <InfoBox
             label="Serving Size"
-            value={servingSize}
+            value={formattedServingSize}
             _groupHover={{ borderColor: "amber.500" }}
           />
         </HStack>

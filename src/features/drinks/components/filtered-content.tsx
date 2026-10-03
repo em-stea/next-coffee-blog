@@ -3,7 +3,7 @@
 import { Container, SimpleGrid } from "@chakra-ui/react";
 import { useDrinksContext } from "../providers/drinks-providers";
 import { DrinkCategoryInterface } from "../types/drinks-categories";
-import { CardDrink } from "./card/card-drink";
+import { CardDrink } from "./card/card-drink/card-drink";
 import { DrinkFilters } from "./filters/filters";
 
 interface FiltersProps {

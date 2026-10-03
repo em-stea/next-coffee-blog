@@ -43,7 +43,7 @@ export async function HomePage() {
         title="The art, origin and ritual of specialty coffee."
         subtitle="From bean harvesting to your ultimate home brew."
         selectedDrink={selectedDrink[0]}
-      />
+      />{" "}
       <CoffeeFundamentals
         eyebrow={"YIELD & ORIGIN \u00A0\ // \u00A0\EXPLORE THE CRAFT"}
         title="Deconstruct the cup. Refine your ritual."

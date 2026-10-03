@@ -149,12 +149,16 @@ export const cardSlotRecipe = defineSlotRecipe({
           borderRadius: "16px",
           overflow: "hidden",
           h: "full",
+          color: "neutral.0",
         },
         header: {
           p: 0,
           h: "25rem",
           maxH: "25rem",
           overflow: "hidden",
+        },
+        body: {
+          justifyContent: "space-between",
         },
       },
     },

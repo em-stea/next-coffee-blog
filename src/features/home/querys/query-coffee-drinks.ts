@@ -11,29 +11,52 @@ export const queryCoffeeDrinks = ({
 }: QueryCoffeeDrinksProps = {}) =>
   qs.stringify(
     {
-      fields: [
-        "name",
-        "slug",
-        "description",
-        "instructions",
-        "foamType",
-        "sortOrder",
-      ],
+      fields: ["name", "slug", "description", "instructions", "sortOrder"],
       populate: {
         cover: {
           fields: ["url", "alternativeText", "width", "height", "formats"],
         },
-        milk_ratio: {
-          fields: ["name", "slug", "description"],
-        },
         drinks_category: {
           fields: ["name", "slug"],
         },
-        serving_size: {
-          fields: ["name", "minimumSize", "maximumSize"],
-        },
-        espresso_shot: {
-          fields: ["name", "minimumVolume", "maximumVolume"],
+        drink_recipe: {
+          fields: ["name", "foam_type"],
+          populate: {
+            serving_size: {
+              fields: ["name", "minimumSize", "maximumSize"],
+            },
+            espresso_shot: {
+              fields: ["name", "minimumVolume", "maximumVolume"],
+            },
+            milk_ratio: {
+              populate: {
+                liquid_ratio: {
+                  fields: ["name"],
+                },
+              },
+            },
+            water_ratio: {
+              populate: {
+                liquid_ratio: {
+                  fields: ["name"],
+                },
+              },
+            },
+            whiskey_ratio: {
+              populate: {
+                liquid_ratio: {
+                  fields: ["name"],
+                },
+              },
+            },
+            syrup_ratio: {
+              populate: {
+                liquid_ratio: {
+                  fields: ["name"],
+                },
+              },
+            },
+          },
         },
       },
       pagination: {
