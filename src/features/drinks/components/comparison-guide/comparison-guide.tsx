@@ -29,7 +29,7 @@ export const ComparisonGuide = ({
     drinkB: null,
   });
 
-  console.log(selectedDrinks);
+  console.log(selectedDrinks, "selectedDrinks");
   return (
     <Container>
       <VStack
@@ -40,14 +40,6 @@ export const ComparisonGuide = ({
         borderColor="neutral.700"
         borderRadius="16px"
       >
-        {/* <Text>INTERACTIVE TOOL · SENSORY & TECHNICAL COMPARATOR</Text>
-      <Heading textStyle="title.3" color="neutral.100">
-        Compare Drinks
-      </Heading>
-      <Text textStyle="body.1" color="neutral.200">
-        Select two brews to compare extraction parameters, volume, milk ratio,
-        foam texture, and cup intensity.
-      </Text> */}
         <HeaderBlock
           eyebrow="INTERACTIVE TOOL"
           title="Compare Drinks"

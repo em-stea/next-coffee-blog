@@ -16,6 +16,8 @@ interface CompositionDrinkChartProps {
   foam_type: FoamType;
 }
 
+const VALID_FOAM_TYPES: readonly string[] = Object.values(FOAM_TYPES);
+
 export const CompositionDrinkChart = ({
   serving_size,
   espresso_shot,
@@ -30,7 +32,7 @@ export const CompositionDrinkChart = ({
       milk_ratio,
     });
 
-  const hasFoam = foam_type !== FOAM_TYPES.NO_FOAM;
+  const hasFoam = foam_type != null && VALID_FOAM_TYPES.includes(foam_type);
 
   return (
     <VStack
@@ -43,32 +45,34 @@ export const CompositionDrinkChart = ({
       h={`${containerHeightPx}px`}
       gap="1"
     >
-      <Flex
-        display={hasFoam ? "flex" : "none"}
-        alignItems="center"
-        justifyContent="center"
-        h={`${milkPercentage - espressoPercentage}px`}
-        w="full"
-        bg="neutral.0"
-        borderRadius="4px"
-      >
-        <Text textStyle="body.1" color="neutral.800">
-          Foam Type / {foam_type}
-        </Text>
-      </Flex>
-      <Flex
-        display={hasRatio ? "flex" : "none"}
-        alignItems="center"
-        justifyContent="center"
-        h={`${milkPercentage}px`}
-        w="full"
-        bg="neutral.200"
-        borderRadius="4px"
-      >
-        <Text textStyle="body.1" color="neutral.800">
-          Milk Ratio / {milk_ratio.name}
-        </Text>
-      </Flex>
+      {hasFoam && (
+        <Flex
+          alignItems="center"
+          justifyContent="center"
+          h={`${milkPercentage - espressoPercentage}px`}
+          w="full"
+          bg="neutral.0"
+          borderRadius="4px"
+        >
+          <Text textStyle="body.1" color="neutral.800">
+            Foam Type / {foam_type}
+          </Text>
+        </Flex>
+      )}
+      {hasRatio && (
+        <Flex
+          alignItems="center"
+          justifyContent="center"
+          h={`${milkPercentage}px`}
+          w="full"
+          bg="neutral.200"
+          borderRadius="4px"
+        >
+          <Text textStyle="body.1" color="neutral.800">
+            Milk Ratio / {milk_ratio.name}
+          </Text>
+        </Flex>
+      )}
 
       <Flex
         alignItems="center"

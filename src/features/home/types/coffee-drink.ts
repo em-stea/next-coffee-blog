@@ -1,5 +1,4 @@
 import { DrinkCategoryInterface } from "@/features/drinks/types/drinks-categories";
-import { MilkRatioInterface } from "@/features/milk-ratios/types/milk-ratio";
 import { ApiResponse, StrapiMedia } from "@/shared/types/strapi-response";
 
 export type ServingSize = {
@@ -9,9 +8,8 @@ export type ServingSize = {
 };
 
 export const FOAM_TYPES = {
-  MICROFOAM: "Microfoam",
-  DENSE_FOAM: "Dense Foam",
-  NO_FOAM: "No Foam",
+  MICROFOAM: "MicroFoam",
+  DENSEFOAM: "DenseFoam",
 } as const;
 
 export type FoamType = (typeof FOAM_TYPES)[keyof typeof FOAM_TYPES] | null;

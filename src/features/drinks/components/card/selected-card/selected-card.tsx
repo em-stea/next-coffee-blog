@@ -17,6 +17,7 @@ export const SelectedCard = ({ drink }: { drink: CoffeeDrinkInterface }) => {
     milk_ratio,
     foam_type: foamType,
   } = drink_recipe;
+  console.log(drink_recipe, "drink_recipe");
 
   console.log(drink, "drink");
   return (
