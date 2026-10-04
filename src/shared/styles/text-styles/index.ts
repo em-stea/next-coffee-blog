@@ -94,6 +94,15 @@ export const textStyles = defineTextStyles({
       lineHeight: { base: "1.375rem", desktop: "1.5rem" },
     },
   },
+  "body.3": {
+    description: "Body 1",
+    value: {
+      fontFamily: "var(--fontfamily-tertiary)",
+      fontWeight: 400,
+      fontSize: { base: "0.9375rem", desktop: "0.75rem" },
+      lineHeight: { base: "1.375rem", desktop: "1.5rem" },
+    },
+  },
   "body.2.semibold": {
     description: "Body 2 Semibold",
     value: {

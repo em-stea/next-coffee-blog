@@ -16,7 +16,6 @@ export default async function DrinksPage() {
 
   if (drinks.length === 0) notFound();
 
-  console.log(drinks, "drinks");
   return (
     <>
       <HeroDrink />

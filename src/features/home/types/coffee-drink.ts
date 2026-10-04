@@ -29,10 +29,23 @@ export type DrinkRecipe = {
   serving_size: ServingSize;
   espresso_shot: EspressoShots | null;
   foam_type: FoamType;
-  milk_ratio: LiquidRatio;
-  water_ratio: LiquidRatio;
-  whiskey_ratio: LiquidRatio;
-  syrup_ratio: LiquidRatio;
+  milk_ratio: {
+    liquid_ratio: LiquidRatio;
+    pour_milk_first: boolean;
+  };
+  water_ratio: {
+    liquid_ratio: LiquidRatio;
+    pour_water_first: boolean;
+  };
+  whiskey_ratio: {
+    liquid_ratio: LiquidRatio;
+  };
+  syrup_ratio: {
+    liquid_ratio: LiquidRatio;
+  };
+  whipped_cream_ratio: {
+    liquid_ratio: LiquidRatio;
+  };
 };
 
 export interface CoffeeDrinkInterface {

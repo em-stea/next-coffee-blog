@@ -50,6 +50,9 @@ export const colors = {
     800: { value: "#302F2B" },
     900: { value: "#181715" },
   },
+  blue: {
+    100: { value: "#86A2B8" },
+  },
 
   "basic-0-opacity": {
     30: { value: "rgba(255, 255, 255, 0.3)" },

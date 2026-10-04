@@ -29,6 +29,7 @@ export const queryCoffeeDrinks = ({
               fields: ["name", "minimumVolume", "maximumVolume"],
             },
             milk_ratio: {
+              fields: ["pour_milk_first"],
               populate: {
                 liquid_ratio: {
                   fields: ["name"],
@@ -36,6 +37,7 @@ export const queryCoffeeDrinks = ({
               },
             },
             water_ratio: {
+              fields: ["pour_water_first"],
               populate: {
                 liquid_ratio: {
                   fields: ["name"],
@@ -50,6 +52,13 @@ export const queryCoffeeDrinks = ({
               },
             },
             syrup_ratio: {
+              populate: {
+                liquid_ratio: {
+                  fields: ["name"],
+                },
+              },
+            },
+            whipped_cream_ratio: {
               populate: {
                 liquid_ratio: {
                   fields: ["name"],
