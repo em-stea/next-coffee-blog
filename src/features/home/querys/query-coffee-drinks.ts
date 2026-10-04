@@ -3,11 +3,13 @@ import qs from "qs";
 type QueryCoffeeDrinksProps = {
   pageSize?: number;
   sort?: string[];
+  slug?: string;
 };
 
 export const queryCoffeeDrinks = ({
   pageSize = 100,
   sort = ["sortOrder:asc"],
+  slug,
 }: QueryCoffeeDrinksProps = {}) =>
   qs.stringify(
     {
@@ -72,6 +74,11 @@ export const queryCoffeeDrinks = ({
         pageSize,
       },
       sort,
+      filters: {
+        slug: {
+          $eq: slug,
+        },
+      },
     },
     {
       encodeValuesOnly: true,

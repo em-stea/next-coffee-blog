@@ -21,9 +21,9 @@ export type HeaderProps = LinkProps | LogoProps | ButtonLinkProps;
 
 export const HEADER_MAIN_LINKS: HeaderProps[] = [
   { title: "DRINKS", href: ROUTES.coffeeDrinks, variant: "text" },
-  { title: "VARIETIES", href: ROUTES.coffeeVarieties, variant: "text" },
-  { title: "BREW", href: ROUTES.brewMethods, variant: "text" },
-  { title: "GRINDERS", href: ROUTES.grinders, variant: "text" },
+  // { title: "VARIETIES", href: ROUTES.coffeeVarieties, variant: "text" },
+  // { title: "BREW", href: ROUTES.brewMethods, variant: "text" },
+  // { title: "GRINDERS", href: ROUTES.grinders, variant: "text" },
 ];
 
 export const HEADER_SIDE_LINK: ButtonLinkProps = {

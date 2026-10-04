@@ -22,6 +22,49 @@ export const drawerSlotRecipe = defineSlotRecipe({
           minWidth: "auto",
         },
       },
+      drinkDetail: {
+        backdrop: {
+          bg: "neutral.900/80",
+        },
+        content: {
+          bg: "neutral.900",
+          borderTop: "1px solid",
+          borderTopColor: "neutral.700",
+          maxH: { base: "40rem", desktop: "fit-content" },
+        },
+        closeTrigger: {
+          minWidth: "auto",
+          mr: { base: "1", desktop: "5" },
+          _hover: {
+            bg: "none",
+            outline: "none",
+          },
+          _focus: {
+            outline: "none",
+            boxShadow: "none",
+          },
+          _focusVisible: {
+            outline: "none",
+            boxShadow: "none",
+          },
+          _active: {
+            outline: "none",
+          },
+        },
+        header: {
+          minH: "3.2rem",
+        },
+        body: {
+          display: "flex",
+          flexDirection: { base: "column", desktop: "row" },
+          gap: "8",
+          px: { base: "4", desktop: "8" },
+          pt: "0",
+          pb: "3.2rem",
+          overflow: { base: "visible", desktop: "hidden" },
+          overflowY: "auto",
+        },
+      },
     },
   },
   defaultVariants: {

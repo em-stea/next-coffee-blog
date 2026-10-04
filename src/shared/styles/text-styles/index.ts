@@ -118,7 +118,7 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "var(--fontfamily-primary)",
       fontWeight: 600,
-      fontSize: { base: "0.8125rem", desktop: "1rem" },
+      fontSize: { base: "1rem", desktop: "1rem" },
       lineHeight: { base: "1.125rem", desktop: "1.8rem" },
       letterSpacing: "0.018rem",
       textTransform: "uppercase",

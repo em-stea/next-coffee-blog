@@ -15,6 +15,7 @@ import { CupWarmIcon } from "./others/cup-warm";
 import { WarningIcon } from "./others/warning";
 import { ToolCoffeeIcon } from "./others/tool-coffee";
 import { FrenchPressIcon } from "./others/french-press";
+import { ChevronLeftIcon } from "./directional/chevron-left";
 
 export const iconEntries = [
   { name: "CupIcon", component: CupIcon, file: "cup" },
@@ -25,6 +26,7 @@ export const iconEntries = [
     component: ChevronRightIcon,
     file: "chevron-right",
   },
+  { name: "ChevronLeftIcon", component: ChevronLeftIcon, file: "chevron-left" },
   { name: "CoffeeBeanIcon", component: CoffeeBeanIcon, file: "coffee-bean" },
   { name: "CupWarmIcon", component: CupWarmIcon, file: "cup-warm" },
   { name: "ToolCoffeeIcon", component: ToolCoffeeIcon, file: "tool-coffee" },

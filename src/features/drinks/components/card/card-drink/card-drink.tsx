@@ -3,14 +3,17 @@
 import { CoffeeDrinkInterface } from "@/features/home/types/coffee-drink";
 import { ResponsivePicture } from "@/shared/components/responsive-picture/responsive-picture";
 import { Box, Card, Heading, Tag, Text, VStack } from "@chakra-ui/react";
-import Link from "next/link";
+
 import { useCursorPosition } from "../../../hooks/use-cursor-position";
 import { CursorImage } from "./cursor-image";
 import { DetailBoxDrink } from "./detail-box-card-drink";
+import Link from "next/link";
+import { ROUTES } from "@/shared/lib/route";
 
 export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
   const {
     name,
+    slug,
     description,
     cover,
     formattedServingSize,
@@ -22,7 +25,7 @@ export function CardDrink({ drink }: { drink: CoffeeDrinkInterface }) {
   const { cardRef, isHovered, cursorPos } = useCursorPosition();
 
   return (
-    <Link href="/">
+    <Link href={ROUTES.drinkDetail(slug)} scroll={false} prefetch={false}>
       <Card.Root variant="drink" className="group" ref={cardRef}>
         <Card.Header>
           <Tag.Root variant="featured" zIndex={3}>

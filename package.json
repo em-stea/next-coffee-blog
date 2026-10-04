@@ -14,6 +14,7 @@
     "@chakra-ui/react": "^3.37.0",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
+    "@radix-ui/react-dialog": "^1.1.23",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^13.4.6",
