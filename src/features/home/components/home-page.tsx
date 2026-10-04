@@ -43,15 +43,15 @@ export async function HomePage() {
         title="The art, origin and ritual of specialty coffee."
         subtitle="From bean harvesting to your ultimate home brew."
         selectedDrink={selectedDrink[0]}
-      />{" "}
+      />
       <CoffeeFundamentals
         eyebrow={"YIELD & ORIGIN \u00A0\ // \u00A0\EXPLORE THE CRAFT"}
-        title="Deconstruct the cup. Refine your ritual."
+        title={`Deconstruct the cup. \n Refine your ritual.`}
         description="A deep dive into understanding coffee origins, fine-tuning critical brewing parameters, and mastering professional extraction techniques at home."
       />
       <EssentialDuo
         eyebrow="EXPERIMENTAL STANDARDS"
-        title="Essential Extraction Duo"
+        title={`Essential \n Extraction  Duo`}
         description="Comparative analysis of the two primary dynamics: atmospheric gravity percolation versus high-pressure hydrostatic injection."
         brewMethods={brewMethods}
       />

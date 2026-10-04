@@ -71,7 +71,7 @@ export const FundamentalItemCard = ({
             <Heading
               textStyle={{ base: "subtitle.2", desktop: "subtitle.3" }}
               color="neutral.0"
-              whiteSpace="pre-line"
+              whiteSpace={{ base: "normal", md: "pre-line" }}
             >
               {title}
             </Heading>

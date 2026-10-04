@@ -25,8 +25,8 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "var(--fontfamily-primary)",
       fontWeight: 600,
-      fontSize: { base: "2.2rem", desktop: "3.75rem" },
-      lineHeight: { base: "2.5rem", desktop: "4.25rem" },
+      fontSize: { base: "2.75rem", desktop: "3.75rem" },
+      lineHeight: { base: "3.2rem", desktop: "4.25rem" },
     },
   },
   "title.2": {
@@ -34,8 +34,8 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "var(--fontfamily-primary)",
       fontWeight: 600,
-      fontSize: { base: "2.75rem", desktop: "3rem" },
-      lineHeight: { base: "3.5rem", desktop: "3.45rem" },
+      fontSize: { base: "2.3rem", desktop: "3rem" },
+      lineHeight: { base: "3rem", desktop: "3.45rem" },
     },
   },
   "title.3": {

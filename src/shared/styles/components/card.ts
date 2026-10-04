@@ -159,6 +159,9 @@ export const cardSlotRecipe = defineSlotRecipe({
         },
         body: {
           justifyContent: "space-between",
+          gap: "4",
+          px: { base: 4, desktop: 4 },
+          py: { base: 4, desktop: 6 },
         },
       },
     },

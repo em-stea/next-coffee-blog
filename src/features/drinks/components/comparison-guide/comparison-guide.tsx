@@ -29,24 +29,29 @@ export const ComparisonGuide = ({
     drinkB: null,
   });
 
-  console.log(selectedDrinks, "selectedDrinks");
   return (
     <Container>
       <VStack
         alignItems="flex-start"
-        px="6"
+        px={{ base: "4", desktop: "6" }}
         py="10"
         border="1px solid"
         borderColor="neutral.700"
         borderRadius="16px"
+        gap="0"
       >
         <HeaderBlock
           eyebrow="INTERACTIVE TOOL"
-          title="Compare Drinks"
+          title={`Explore & Compare \n Brewed Drinks`}
           description="Select two brews to compare extraction parameters, volume, milk ratio, foam texture, and cup intensity."
+          type="row"
         />
-        <Box px="21" w="full">
-          <HStack gap="4" w="full">
+        <Box px={{ base: "0", desktop: "21" }} w="full">
+          <HStack
+            gap={{ base: "1.5", desktop: "4" }}
+            w="full"
+            flexDirection={{ base: "column", lg: "row" }}
+          >
             <InputSelect
               collection={drinks}
               placeholder="Select a drink"
@@ -68,7 +73,11 @@ export const ComparisonGuide = ({
           </HStack>
 
           {selectedDrinks.drinkA && selectedDrinks.drinkB && (
-            <Grid templateColumns="repeat(2, 1fr)" gap="4" mt="8">
+            <Grid
+              templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
+              gap="4"
+              mt="8"
+            >
               <GridItem>
                 <SelectedCard drink={selectedDrinks.drinkA} />
               </GridItem>

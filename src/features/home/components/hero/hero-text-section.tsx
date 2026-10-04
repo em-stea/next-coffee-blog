@@ -40,7 +40,12 @@ export const HeroTextSection = ({
         <Circle bg="amber.500" size="2" />
         <Tag.Label>{eyebrow}</Tag.Label>
       </Tag.Root>
-      <Heading textStyle="title.1" color="neutral.0" mt="2" mb="4">
+      <Heading
+        textStyle="title.1"
+        color="neutral.0"
+        mt={{ base: "4", desktop: "2" }}
+        mb="4"
+      >
         {title}
       </Heading>
       <Heading
