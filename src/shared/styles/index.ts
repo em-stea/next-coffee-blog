@@ -15,8 +15,12 @@ const config = defineConfig({
     },
     tokens: {
       colors,
-      spacing: {
+    },
+    semanticTokens: {
+      sizes: {
         "21": { value: "5.5rem" }, // 88px
+        "26": { value: "6.75rem" }, // 108px
+        "29": { value: "7.25rem" }, // 116px
       },
     },
     textStyles,

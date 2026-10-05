@@ -1,23 +1,42 @@
 "use client";
 
 import { CloseButton, Drawer } from "@chakra-ui/react";
-import { useRouter } from "next/navigation";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export function DrinkDrawerShell({ children }: { children: ReactNode }) {
-  const router = useRouter();
+  const [open, setOpen] = useState(false);
+  const isReadyRef = useRef(false);
 
+  useEffect(() => {
+    // Forzamos un frame de espera para activar el Drawer y habilitar los cierres
+    const timer = requestAnimationFrame(() => {
+      setOpen(true);
+      // Habilitamos la recepción de eventos de cierre en el siguiente tick
+      setTimeout(() => {
+        isReadyRef.current = true;
+      }, 50);
+    });
+
+    return () => cancelAnimationFrame(timer);
+  }, []);
+
+  const handleClose = () => {
+    if (!isReadyRef.current) return;
+
+    setOpen(false);
+  };
   return (
     <Drawer.Root
       placement="bottom"
-      open
       variant="drinkDetail"
-      closeOnInteractOutside={false}
-      onOpenChange={(details) => {
-        if (!details.open) router.back();
+      open={open}
+      onOpenChange={(e) => {
+        if (!e.open) {
+          handleClose();
+        }
       }}
     >
-      <Drawer.Backdrop onClick={() => router.back()} />
+      <Drawer.Backdrop />
       <Drawer.Positioner>
         <Drawer.Content>
           <Drawer.Header>
