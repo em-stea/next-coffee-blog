@@ -9,10 +9,10 @@ export function ImageDrawer({
 }) {
   return (
     <Box
-      position="relative"
-      w={{ base: "full", desktop: "25rem" }}
-      minW={{ base: "full", desktop: "25rem" }}
-      h={{ base: "15rem", desktop: "30rem" }}
+      position={{ base: "relative", desktop: "absolute" }}
+      inset={{ base: undefined, desktop: 0 }}
+      w="full"
+      h={{ base: "18rem", desktop: "auto" }}
       p="1px"
       mt={{ base: 3, desktop: "0" }}
       borderRadius="8px"

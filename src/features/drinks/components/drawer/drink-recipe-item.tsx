@@ -2,7 +2,7 @@ import { GridItem, Text } from "@chakra-ui/react";
 
 interface DrinkRecipeItemProps {
   label: string;
-  value: string | null | undefined;
+  value: string | null;
   colSpan?: number;
 }
 
@@ -11,7 +11,8 @@ export const DrinkRecipeItem = ({
   value,
   colSpan = 1,
 }: DrinkRecipeItemProps) => {
-  const noValue = value === null || value === undefined;
+  if (value === null) return null;
+
   return (
     <GridItem
       colSpan={colSpan}
@@ -23,8 +24,8 @@ export const DrinkRecipeItem = ({
       <Text textStyle="body.3.semibold" color="neutral.0">
         {label}:
       </Text>
-      <Text textStyle="body.1" color={noValue ? "neutral.600" : "neutral.0"}>
-        {noValue ? "No " + label : value}
+      <Text textStyle="body.1" color="neutral.0">
+        {value}
       </Text>
     </GridItem>
   );

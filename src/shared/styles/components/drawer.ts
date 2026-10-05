@@ -60,7 +60,6 @@ export const drawerSlotRecipe = defineSlotRecipe({
           gap: "8",
           px: { base: "4", desktop: "8" },
           pt: "0",
-          pb: "3.2rem",
           overflow: { base: "visible", desktop: "hidden" },
           overflowY: "auto",
         },
