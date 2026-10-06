@@ -16,11 +16,12 @@ export const HeroAccesories = () => {
       <Box
         bg="neutral.900"
         opacity="0.7"
-        h="full"
+        h="100vh"
         w="full"
         position="absolute"
         top="0"
         left="0"
+        overflow="hidden"
       />
       <Box
         w="full"

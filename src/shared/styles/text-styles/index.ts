@@ -75,6 +75,15 @@ export const textStyles = defineTextStyles({
       lineHeight: { base: "1.375rem", desktop: "2rem" },
     },
   },
+  "subtitle.4": {
+    description: "Subtitle 1",
+    value: {
+      fontFamily: "var(--fontfamily-primary)",
+      fontWeight: 600,
+      fontSize: { base: "1.8rem", desktop: "2.2rem" },
+      lineHeight: { base: "2rem", desktop: "2rem" },
+    },
+  },
 
   "body.1": {
     description: "Body 1",

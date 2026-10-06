@@ -1,3 +1,4 @@
+import { accordionSlotRecipe } from "./accordion";
 import { buttonRecipe } from "./button";
 import { cardSlotRecipe } from "./card";
 import { containerRecipe } from "./container";
@@ -17,4 +18,5 @@ export const slotRecipes = {
   tag: tagSlotRecipe,
   drawer: drawerSlotRecipe,
   select: selectSlotRecipe,
+  accordion: accordionSlotRecipe,
 };

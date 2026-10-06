@@ -19,8 +19,8 @@ export default async function AccesoriesPage() {
       <HeroAccesories />
       <Container>
         <StackCardAccesories data={[firstFeatured, secondFeatured]} />
-        <AccordionAccesories items={rest} />
       </Container>
+      <AccordionAccesories items={rest} />
     </>
   );
 }
