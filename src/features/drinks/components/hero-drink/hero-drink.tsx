@@ -46,7 +46,7 @@ export const HeroDrink = () => {
           overflow="hidden"
           transition={{ ease: "easeOut" }}
         >
-          <Box position="relative">
+          <Box position="relative" mt="20">
             {/* Heading con máscara de imagen */}
             <Heading
               textStyle="title.1-extra-big"

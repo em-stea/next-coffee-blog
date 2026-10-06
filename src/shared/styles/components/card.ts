@@ -164,6 +164,22 @@ export const cardSlotRecipe = defineSlotRecipe({
           py: { base: 4, desktop: 6 },
         },
       },
+      accesories: {
+        root: {
+          border: "1px solid",
+          borderColor: "amber.500",
+          borderRadius: "8px",
+        },
+        header: {
+          p: 0,
+          h: "30rem",
+          maxH: "30rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          overflow: "hidden",
+        },
+      },
     },
   },
   defaultVariants: {
