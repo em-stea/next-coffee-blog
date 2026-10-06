@@ -18,7 +18,7 @@ export const DrinkRecipeItem = ({
       colSpan={colSpan}
       border="1px solid"
       borderColor="neutral.700"
-      p="4"
+      p="3"
       borderRadius="8px"
     >
       <Text textStyle="body.3.semibold" color="neutral.0">
