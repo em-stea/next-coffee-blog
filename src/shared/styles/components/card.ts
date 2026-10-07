@@ -153,7 +153,7 @@ export const cardSlotRecipe = defineSlotRecipe({
         },
         header: {
           p: 0,
-          h: "25rem",
+          h: { base: "25rem" },
           maxH: "25rem",
           overflow: "hidden",
         },
@@ -172,12 +172,16 @@ export const cardSlotRecipe = defineSlotRecipe({
         },
         header: {
           p: 0,
-          h: "30rem",
+          h: { base: "auto", desktop: "30rem" },
           maxH: "30rem",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           overflow: "hidden",
+        },
+        body: {
+          px: { base: 4, desktop: 6 },
+          py: { base: 8, desktop: 6 },
         },
       },
     },

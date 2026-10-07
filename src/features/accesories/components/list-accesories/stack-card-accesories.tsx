@@ -6,7 +6,10 @@ interface CardAccesoriesProps {
 }
 export const StackCardAccesories = ({ data }: CardAccesoriesProps) => {
   return (
-    <Grid templateColumns="repeat(2, 1fr)" gap="6">
+    <Grid
+      templateColumns={{ base: "repeat(1, 1fr)", desktop: "repeat(2, 1fr)" }}
+      gap="6"
+    >
       {data.map((item, index) => (
         <GridItem key={index} colSpan={1}>
           <Card.Root key={item.slug} variant="accesories">

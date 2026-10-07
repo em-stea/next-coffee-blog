@@ -44,19 +44,30 @@ export const accordionSlotRecipe = defineSlotRecipe({
     itemIndicator: {
       transition: "rotate 0.2s",
       transformOrigin: "center",
+      fontSize: "25px",
       _open: {
         rotate: "180deg",
       },
+    },
+    itemBody: {
+      display: "flex",
+      flexDirection: { base: "column", desktop: "row" },
+      gap: "10",
+      pt: "2",
+      pb: "10",
+      px: { base: "6", desktop: "20" },
     },
   },
   variants: {
     variant: {
       default: {
         item: {
-          py: "6",
-          px: "20",
           borderTop: "1px solid",
           borderColor: "neutral.700",
+        },
+        itemTrigger: {
+          py: "8",
+          px: { base: "6", desktop: "20" },
         },
       },
     },
